@@ -1,183 +1,187 @@
 import Swiper from "swiper";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, EffectFade, Scrollbar, Grid } from "swiper/modules";
 /**
  * @param swiperInit
  */
 export function swiperInit() {
-	swiperStaff();
-	swiperProductSimilar();
-	swiperSingleProject();
-
-	//   new Swiper(".section-home-banner .swiper", {
-	//     slidesPerView: 1,
-	//     spaceBetween: 0,
-	//     speed: 1000,
-	//     loop: true,
-	//     effect: "fade",
-	//     autoplay: {
-	//       delay: 3500,
-	//     },
-	//     modules: [Pagination, Navigation, Autoplay, EffectFade],
-	//     pagination: {
-	//       el: ".section-home-banner .swiper-pagination",
-	//       clickable: true,
-	//       renderBullet: function (index, className) {
-	//         const slide = this.slides[index];
-	//         const title = slide.getAttribute("data-title") || `Slide ${index + 1}`;
-	//         return `<span class="${className}">${title}</span>`;
-	//       },
-	//     },
-	//     navigation: {
-	//       nextEl: ".section-home-banner .btn-next",
-	//       prevEl: ".section-home-banner .btn-prev",
-	//     },
-	//   });
-	//   // Reuseable Swiper
-	//   $(".swiper-cols-1 .swiper").each(function () {
-	//     new Swiper(this, {
-	//       slidesPerView: 1,
-	//       spaceBetween: 20,
-	//       modules: [Navigation],
-	//       navigation: {
-	//         nextEl: $(this).closest(".swiper-cols-1").find(".btn-next")[0],
-	//         prevEl: $(this).closest(".swiper-cols-1").find(".btn-prev")[0],
-	//       },
-	//     });
-	//   });
-	//   $(".swiper-cols-2 .swiper").each(function () {
-	//     new Swiper(this, {
-	//       slidesPerView: 1,
-	//       spaceBetween: 20,
-	//       modules: [Navigation],
-	//       navigation: {
-	//         nextEl: $(this).closest(".swiper-cols-1").find(".btn-next")[0],
-	//         prevEl: $(this).closest(".swiper-cols-1").find(".btn-prev")[0],
-	//       },
-	//       breakpoints: {
-	//         768: {
-	//           slidesPerView: 2,
-	//           spaceBetween: 40,
-	//         },
-	//       },
-	//     });
-	//   });
-	//   $(".swiper-cols-3 .swiper").each(function () {
-	//     new Swiper(this, {
-	//       slidesPerView: 1,
-	//       spaceBetween: 20,
-	//       modules: [Navigation],
-	//       navigation: {
-	//         nextEl: $(this).closest(".swiper-cols-3").find(".btn-next")[0],
-	//         prevEl: $(this).closest(".swiper-cols-3").find(".btn-prev")[0],
-	//       },
-	//       breakpoints: {
-	//         768: {
-	//           slidesPerView: 2,
-	//         },
-	//         1200: {
-	//           slidesPerView: 3,
-	//           spaceBetween: 40,
-	//         },
-	//       },
-	//     });
-	//   });
-	//   $(".swiper-cols-4 .swiper").each(function () {
-	//     new Swiper(this, {
-	//       slidesPerView: 1,
-	//       spaceBetween: 20,
-	//       modules: [Navigation],
-	//       navigation: {
-	//         nextEl: $(this).closest(".swiper-cols-4").find(".btn-next")[0],
-	//         prevEl: $(this).closest(".swiper-cols-4").find(".btn-prev")[0],
-	//       },
-	//       breakpoints: {
-	//         768: {
-	//           slidesPerView: 3,
-	//         },
-	//         1200: {
-	//           slidesPerView: 4,
-	//           spaceBetween: 40,
-	//         },
-	//       },
-	//     });
-	//   });
+	swiperProduct();
+	swiperBrand();
+	swiperBanner();
+	swiperHome9();
 }
-function swiperSingleProject() {
-	const swiperSingleProject = new Swiper(".swiper-single-project .swiper", {
-		modules: [Autoplay, Navigation],
+function swiperBanner() {
+	const swiper = new Swiper(".swiper-home-banner", {
+		modules: [Autoplay, Navigation, EffectFade],
 		spaceBetween: 12,
-		slidesPerView: 1.25,
-		freeMode: true,
-		initialSlide: 1,
+		slidesPerView: 1,
+		speed: 1500,
 		loop: true,
-		centeredSlides: true,
+		// effect: "fade",
+		autoplay: {
+			delay: 3500,
+		},
+		navigation: {
+			nextEl: ".home-1 .btn-next",
+			prevEl: ".home-1 .btn-prev",
+		},
+		loop: true,
+	});
+}
+
+// function swiperProductDetail() {
+// 	const colLeft = document.querySelector(".col-left");
+// 	if (!colLeft) return;
+
+// 	const thumb = colLeft.querySelector(".swiper-product-detail-thumb");
+// 	const main = colLeft.querySelector(".swiper-product-detail");
+// 	const prevBtn = colLeft.querySelector(".btn-prev");
+// 	const nextBtn = colLeft.querySelector(".btn-next");
+
+// 	const swiperThumb = new Swiper(thumb, {
+// 		modules: [Autoplay],
+// 		spaceBetween: 12,
+// 		slidesPerView: 3.5,
+// 		freeMode: true,
+// 		watchSlidesProgress: true,
+// 		loop: false,
+// 		breakpoints: {
+// 			768: {
+// 				slidesPerView: 3,
+// 				spaceBetween: 24,
+// 				direction: "vertical",
+// 			},
+// 			1024: {
+// 				spaceBetween: 15,
+// 				slidesPerView: 5,
+// 				direction: "vertical",
+// 			},
+// 			1200: {
+// 				spaceBetween: 15,
+// 				slidesPerView: 5,
+// 				direction: "vertical",
+// 			},
+// 		},
+// 	});
+
+// 	const swiperDetail = new Swiper(main, {
+// 		spaceBetween: 10,
+// 		loop: false,
+// 		modules: [Autoplay, Navigation, Thumbs],
+// 		thumbs: {
+// 			swiper: swiperThumb,
+// 		},
+// 		navigation: {
+// 			nextEl: nextBtn,
+// 			prevEl: prevBtn,
+// 		},
+// 	});
+
+// 	window.productDetailSwiper = {
+// 		element: colLeft,
+// 		swiperThumb,
+// 		swiperDetail,
+// 	};
+
+// 	const weightOptions = document.querySelectorAll(".product-detail-weight-list span");
+// 	if (weightOptions.length > 0) {
+// 		weightOptions[0].classList.add("active");
+// 	}
+// }
+
+function swiperBrand() {
+	const swiper = new Swiper(".brand-swiper", {
+		slidesPerView: 3,
+		modules: [Autoplay, Navigation, Grid], // Đảm bảo đã import EffectFade
+		loop: true,
+		grid: {
+			rows: 2, // Điều này sẽ tạo ra 2 hàng
+			fill: "row",
+		},
+		// autoplay: {
+		// 	delay: 3500,
+		// 	disableOnInteraction: false,
+		// },
+		speed: 1500,
+		navigation: {
+			nextEl: ".home-8 .btn-next",
+			prevEl: ".home-8 .btn-prev",
+		},
 		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
 			1024: {
-				slidesPerView: 1,
-				centeredSlides: false,
+				slidesPerView: 5,
+			},
+			1200: {
+				slidesPerView: 4,
 				spaceBetween: 40,
 			},
 		},
 	});
 }
 
-function swiperStaff() {
-	const swiper = new Swiper(".swiper-staff", {
-		spaceBetween: 20, // Khoảng cách giữa các slide
+function swiperHome9() {
+	const swiper = new Swiper(".home-9-swiper", {
 		slidesPerView: 2,
-		modules: [Autoplay, Navigation],
+		modules: [Autoplay, Navigation], // Đảm bảo đã import EffectFade
+		loop: true,
+		// grid: {
+		// 	rows: 2, // Điều này sẽ tạo ra 2 hàng
+		// 	fill: "row",
+		// },
 		autoplay: {
 			delay: 3500,
 			disableOnInteraction: false,
 		},
-		speed: 2000,
+		speed: 1500,
 		navigation: {
-			nextEl: ".custom-next",
-			prevEl: ".custom-prev",
+			nextEl: ".home-9 .btn-next",
+			prevEl: ".home-9 .btn-prev",
 		},
 		breakpoints: {
-			640: {
-				slidesPerView: 1, // Số slide trên mỗi hàng ở kích thước màn hình nhỏ
-				spaceBetween: 20,
-			},
 			768: {
-				slidesPerView: 2, // Số slide trên mỗi hàng ở kích thước màn hình trung bình
-				spaceBetween: 30,
+				slidesPerView: 3,
 			},
 			1024: {
-				slidesPerView: 3, // Số slide trên mỗi hàng ở kích thước màn hình lớn
+				slidesPerView: 5,
+			},
+			1200: {
+				slidesPerView: 6,
 				spaceBetween: 40,
 			},
 		},
 	});
 }
 
-function swiperProductSimilar() {
-	const swiper = new Swiper(".product-similar-swiper", {
-		spaceBetween: 20, // Khoảng cách giữa các slide
-		slidesPerView: 2,
-		modules: [Autoplay, Navigation],
-		autoplay: {
-			delay: 3500,
-			disableOnInteraction: false,
+function swiperProduct() {
+	const swiper = new Swiper(".product-swiper", {
+		slidesPerView: 3,
+		modules: [Autoplay, Navigation, Scrollbar], // Đảm bảo đã import EffectFade
+		// loop: true,
+		scrollbar: {
+			el: ".swiper-scrollbar",
+			hide: false,
 		},
-		speed: 2000,
+		// autoplay: {
+		// 	delay: 3500,
+		// 	disableOnInteraction: false,
+		// },
+		speed: 1500,
 		navigation: {
-			nextEl: ".custom-next",
-			prevEl: ".custom-prev",
+			nextEl: ".home-5 .btn-next",
+			prevEl: ".home-5 .btn-prev",
 		},
 		breakpoints: {
-			640: {
-				slidesPerView: 1, // Số slide trên mỗi hàng ở kích thước màn hình nhỏ
-				spaceBetween: 20,
-			},
 			768: {
-				slidesPerView: 2, // Số slide trên mỗi hàng ở kích thước màn hình trung bình
-				spaceBetween: 30,
+				slidesPerView: 3,
 			},
 			1024: {
-				slidesPerView: 4, // Số slide trên mỗi hàng ở kích thước màn hình lớn
-				spaceBetween: 40,
+				slidesPerView: 5,
+			},
+			1200: {
+				slidesPerView: 3.95,
+				spaceBetween: "40",
 			},
 		},
 	});

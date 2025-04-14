@@ -1,0 +1,48 @@
+section.home-3(class="section-py")
+	.container 
+		.wrap(data-toggle="tabslet" class="mb-base")
+			div.home-3-top(class="flex justify-between max-md:flex-col max-md:items-center mb-base")
+				h2.title-36 Danh mục Sản phẩm
+				ul.tabslet-tab.home-3-nav
+					li.active 
+						a(href="#tab1") Tất cả
+					li 
+						a(href="#tab2") Rượu mạnh
+					li 
+						a(href="#tab3") Rượu vang
+					li 
+						a(href="#tab4") Rượu mạnh
+					li 
+						a(href="#tab5") Rượu vang
+					li 
+						a(href="#tab6") Rượu mạnh
+			.tabslet-content.active#tab1
+				.swiper.product-swiper 
+					.swiper-wrapper 
+						.swiper-slide 
+							+ProductItem()
+						.swiper-slide 
+							+ProductItem()
+						.swiper-slide 
+							+ProductItem()
+						.swiper-slide 
+							+ProductItem()
+						.swiper-slide 
+							+ProductItem()
+						.swiper-slide 
+							+ProductItem()
+						.swiper-slide 
+							+ProductItem()
+						.swiper-slide 
+							+ProductItem()
+					.home-3-scroll(class="mt-base")
+						.swiper-scrollbar
+					
+				.indicator-swipe.active
+					img(src="./img/chevron-left.svg", alt="" class="arrow")
+					img(src="./img/finger.svg", alt="" class="hand")
+					img(src="./img/chevron-right.svg", alt="" class="arrow")
+				.home-3-btn(class="mt-base flex-center")
+					+btnPrimary()
+			.tabslet-content.active#tab2
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium voluptas quidem possimus, quisquam itaque. Incidunt, eveniet omnis iste possimus praesentium quidem magni est. Accusantium enim culpa corporis fugiat tempore.

@@ -1,15 +1,54 @@
 .header
-	@apply  py-4 bg-Neutral-White sticky left-0 right-0 z-100 top-0
-	.header-nav
-		@apply flex justify-center items-center xl:gap-11 lg:gap-5
-		li
-			a
-				@apply text-lg font-semibold text-Neutral-900 pb-1 border-b border-transparent 
-				
-			
-			&[class*='current']
-				&>a
-					@apply text-red-300
+	box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.05)
+	@apply pt-3 bg-Neutral-White sticky left-0 right-0 z-100 top-0
+	.header-search
+
+		@apply flex items-center rem:h-[44px] gap-1
+		input
+			border-radius: 4px 0 0 4px 
+			@apply w-full h-full py-3 px-4 bg-Neutral-50
+			&::placeholder
+				@apply text-Primary-Dark-Gray
+		.search
+			@apply h-full
+		.header-search-icon
+			@apply bg-Primary-Red py-3 px-6 text-Neutral-White text-xl h-full
+			@apply flex items-center
+			border-radius: 0 4px 4px 0
+	.header-top-right
+		a.btn-cart
+			@apply p-3 rounded-1 bg-Neutral-50 inline-flex items-center gap-2 justify-center text-Primary-Red
+			&:hover
+				@apply bg-Primary-Red text-Neutral-White
+		a.login-button
+			@apply p-3 rounded-1 bg-Neutral-50 inline-flex items-center gap-2 justify-center text-Primary-Red
+			&:hover
+				@apply bg-Primary-Red text-Neutral-White
+	.header-bottom
+		@apply pb-3
+		.header-nav
+			@apply flex justify-between w-full
+			li
+				@apply relative
+				a
+					@apply font-semibold text-Primary-Dark-Gray pb-2 border-b-2 border-transparent relative uppercase
+					&.active
+						@apply text-Primary-Red border-b-2 border-b-Primary-Red
+					&:hover
+						@apply text-Primary-Red border-b-2 border-b-Primary-Red
+				&:not(:last-child)::before
+					content: ""
+					position: absolute
+					right: -40px
+					top: 50%
+					transform: translateY(-50%)
+					width: 1px
+					height: 12px
+					@apply bg-[#B0B5BE]
+		
+				&[class*='current']
+					&>a
+						@apply text-Primary-Red font-semibold border-b-2 border-b-Primary-Red #{!important}
 	.header-bar
 		@apply w-12 h-12 flex-shrink-0 inline-flex items-center justify-center text-Neutral-White bg-red-400 backdrop-blur-sm text-2xl
 	.search-bar-container
@@ -72,4 +111,4 @@
 				li
 					&[class*='current']
 						&>a
-							@apply text-Neutral-900
+							@apply text-Primary-Red

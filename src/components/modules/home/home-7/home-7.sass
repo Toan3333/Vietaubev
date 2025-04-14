@@ -1,0 +1,26 @@
+.home-7
+	@apply relative overflow-hidden
+	.swiper
+		overflow: unset !important
+		.home-7-scroll
+			@apply inline-flex
+			.swiper-scrollbar 
+				@apply w-full h-[4px] rounded-lg bg-Neutral-100
+			/* Tùy chỉnh phần tay cầm của thanh cuộn */
+			.swiper-scrollbar .swiper-scrollbar-drag 
+				@apply bg-Primary-Red rem:w-[600px] h-[4px] rounded-none #{!important}
+			.swiper-scrollbar:hover .swiper-scrollbar-drag 
+				@apply bg-Primary-Red
+			.swiper-scrollbar::-webkit-scrollbar 
+				width: 10px 
+				height: 8px 
+			.swiper-scrollbar::-webkit-scrollbar-track 
+				background: #f0f0f0
+				border-radius: 10px
+
+
+			.swiper-scrollbar::-webkit-scrollbar-thumb 
+				background-color: #007bff
+				border-radius: 10px
+			.swiper-scrollbar::-webkit-scrollbar-thumb:hover 
+				background-color: #0056b3

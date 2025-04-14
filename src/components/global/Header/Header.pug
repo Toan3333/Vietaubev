@@ -1,2 +1,42 @@
-header
-	
+header.header
+	.container 
+		.header-top(class="flex items-center justify-between rem:mb-[13px]") 
+			.header-logo(class="rem:w-[146px] rem:h-[67px]") 
+				a(href="#" class="w-full h-full block")
+					img(src="./img/logo.svg", alt="" class="w-full h-full object-cover lozad") 
+			.header-search
+				.search(class="relative rem:w-[416px]")
+					input(type="text" placeholder="Tìm kiếm")
+				.header-search-icon
+					i.fa-solid.fa-magnifying-glass
+			.header-top-right(class="flex items-center gap-5")
+				a.btn-cart(href="#")  
+					.icon(class="text-xl") 
+						i.fa-regular.fa-cart-flatbed-boxes
+					span Giỏ hàng (05)
+				a.login-button(href="#")  
+					.icon(class="text-xl") 
+						i.fa-regular.fa-right-to-bracket
+					span Đăng nhập / Đăng ký
+		.header-bottom(class="rem:pt-[13px] border-t border-t-Neutral-100")
+			.header-menu(class="flex items-center justify-between")
+				ul.header-nav 
+					li 
+						a.active(href="#") 
+							i.fa-solid.fa-house
+					li 
+						a(href="./about.html") GIỚI THIỆU 
+					li 
+						a(href="./service.html") RƯỢU MẠNH
+					li 
+						a(href="./productList.html") RƯỢU VANG
+					li 
+						a(href="./newList.html") RƯỢU SAKE - MƠ
+					li 
+						a(href="./productList.html") HỘP QUÀ
+					li 
+						a(href="./productList.html") SẢN PHẨM KHÁC
+					li 
+						a(href="./productList.html") TIN TỨC
+					li 
+						a(href="./productList.html") LIÊN HỆ

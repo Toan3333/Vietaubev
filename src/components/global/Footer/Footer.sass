@@ -1,0 +1,106 @@
+
+	
+
+.footer
+	// background-image: url('../img/bg-footer1.png') /* Đường dẫn đến hình ảnh của bạn */
+	// background-position: center /* Căn giữa hình ảnh */
+	// background-attachment: fixed /* Hình nền sẽ không cuộn khi bạn cuộn trang */
+	// background-repeat: no-repeat /* Không lặp lại hình ảnh */
+	// background-size: cover /* Đảm bảo hình ảnh phủ toàn bộ phần tử */
+	.social-fixed
+		@apply pointer-events-auto
+		ul
+			@apply flex flex-col
+			li
+				a
+					display: grid
+					position: relative
+					grid-template-columns: 3.125rem 1fr
+					align-items: center
+					justify-content: center
+					transform: translateY(calc(100% - 3.125rem))
+					transform-origin: top
+					transition: all .3s
+					border-radius: .20833rem 0 0 .20833rem
+					background-color: #ffc300
+					height: 3.125rem
+					pointer-events: auto
+					color: #fff
+					text-decoration: none
+					i
+						animation: shake 1s infinite
+						@apply text-2xl
+					&:hover
+						@apply translate-y-0 
+				.social-messages
+					display: flex
+					flex-direction: column
+					position: relative
+					top: 0
+					transform: translateY(calc(100% - 3.125rem)) 
+					align-items: center
+					justify-content: center
+					width: auto
+					transform-origin: top
+					transition: transform 0.3s
+					border-radius: .20833rem 0 0 .20833rem
+					background-color: #ffc300
+					pointer-events: auto
+					color: #fff
+					text-decoration: none
+
+					a
+						height: 3.125rem
+						display: flex
+						align-items: center
+						justify-content: center
+						width: 100%
+						text-decoration: none
+						color: #fff
+
+						&:hover
+							@apply border-none
+
+					&:hover
+						transform: translateY(0) // Trượt lên khi hover
+
+	h3
+		@apply text-lg font-bold text-Neutral-White mb-6
+	.form-footer
+		@apply w-[960px] mx-auto flex items-center rem:gap-[10px] rem:h-[49px] rem:mt-[21px]
+		.form-field
+			@apply rem:w-[790px] h-full flex-shrink-0 relative
+			input
+				@apply w-full bg-transparent h-full rem:pb-[15px] border-b border-b-Neutral-White opacity-50
+		.btn-submit 
+			@apply h-full
+			button
+				@apply w-full h-full bg-Primary-Silver rounded-1 rem:py-[6px] rem:px-[62px] text-xl font-bold text-Primary-Red
+	.footer-left
+		.footer-desc
+			@apply text-Neutral-White opacity-70 mb-6
+	.footer-right
+		ul.footer-menu
+			@apply flex flex-col gap-3
+			li
+				a
+					@apply text-Neutral-White opacity-70 font-normal
+		.footer-social 
+			@apply rem:mt-[51px]
+			ul
+				@apply flex items-center gap-2
+				li
+					a
+						@apply w-10 h-10 rounded-1 border border-255 inline-flex items-center justify-center text-Neutral-White bg-transparent
+						&:hover
+							@apply bg-Neutral-White text-Primary-Red
+	.footer-copyright
+		.right
+			a
+				@apply text-sm text-Neutral-White opacity-50 relative
+				&::before
+					content: ""
+					@apply absolute w-[1px] h-[12px] bg-255-20 right-[-5px] bottom-[4px]
+				&:last-child
+					&::before
+						content: unset

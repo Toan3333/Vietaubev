@@ -212,10 +212,12 @@ module.exports = {
 		extend: {
 			colors: {
 				transparent: "transparent",
+				255: "rgba(255, 255, 255, 0.10)",
+				"255-20": "rgba(255, 255, 255, 0.20)",
 				Primary: {
 					Red: "#630814",
 					Silver: "#fffbf5",
-					"Dark Gray": "#222222",
+					"Dark-Gray": "#222222",
 				},
 				Neutral: {
 					50: "#f5f5f5",
@@ -223,6 +225,7 @@ module.exports = {
 					200: "#b0b5be",
 					300: "#818998",
 					400: "#333f48",
+					800: "#464646",
 					White: "#ffffff",
 					navy: "#091c36",
 					Black: "#000000",

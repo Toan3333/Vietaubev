@@ -25,15 +25,16 @@
 			@apply flex-center
 			@apply font-awesome text-orange-500 font-light bg-white flex-shrink-0
 	&.btn-sw-1
-		background: rgba(0, 0, 0, 0.20)
-		@apply w-15 h-15 py-2 px-5  flex-center hover:bg-red-400 hover:border-transparent rounded-full
+		@apply w-12 h-12 rounded-lg py-2 px-5  flex-center hover:bg-Primary-Red  bg-Neutral-50 
 		&::before
-			@apply font-awesome text-Neutral-White text-32 font-light
+			@apply font-awesome text-Primary-Red text-28 font-extralight
+			&:hover
+				@apply text-Neutral-White font-extralight
 		&.btn-prev
 			&::before
-				content: '\f060'
+				content: '\f053'
 		&.btn-next
 			&::before
-				content: '\f061'
+				content: '\f054'
 				@apply font-awesome
 

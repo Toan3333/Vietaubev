@@ -1,22 +1,96 @@
 @layer components
 	.item-comp
 		@apply flex
+	.button-primary
+		transition: color 0.5s ease, border-color 0.5s ease
+		@apply py-3 px-5 rounded-1 bg-transparent relative overflow-hidden text-Primary-Red font-semibold inline-flex z-10 border border-Primary-Red h-12 transition-all duration-300 
+		a
+			@apply flex items-center gap-2 uppercase
+			.icon
+				@apply  text-xl transition-transform duration-200
+		&.white
+			@apply border border-Neutral-White text-Neutral-White bg-transparent
+			&::before
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				width: 0%
+				height: 100%
+				transition: width 0.5s ease, border-radius 0.5s ease
+				background-color: white
+				z-index: -1
+				&:hover
+					@apply w-full
+			&:hover
+				@apply text-Primary-Red
+			
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			width: 0%
+			height: 100%
+			background-color: #630814
+		
+			z-index: -1
+			transition: width 0.5s ease, border-radius 0.5s ease
+			&:hover
+				@apply w-full 
+		&:hover
+			// @apply rounded-tr-lg rounded-br-lg
+			@apply text-Neutral-White  
+			a
+				.icon
+					@apply translate-x-1 transition-transform duration-200
+			
+
+	.product-item
+		.product-image
+			@apply rounded-2xl border border-Neutral-100 overflow-hidden rem:w-[320px] rem:h-[360px]
+		.product-content
+			@apply mt-4 flex flex-col items-center justify-center text-center relative
+			.top h3
+				@apply text-lg font-normal text-Neutral-Black
+			.bottom
+				@apply relative flex justify-center items-center w-full rem:h-[46px]
+				.price
+					@apply group-hover:hidden flex items-center justify-center gap-5
+					.price-sale
+						@apply text-xl font-bold text-Primary-Red
+					.price-old
+						@apply line-through text-Neutral-300
+		
+		&:hover
+			.product-image
+				@apply shadow-Dropshadow-Light border border-Neutral-100 
+			.product-content
+				.top h3
+					@apply text-Primary-Red
+	
+
+
+
+
 	.button-to-top
 		@apply opacity-0 pointer-events-none
 		&.active
 			@apply opacity-100 pointer-events-auto
-	// .indicator-swipe
-	// 	&:not(.custom)
-	// 		@apply absolute top-1/2 -translate-y-1/2  right-15
-	// 	@apply z-30 bg-blue-75 w-[calc(144/19.2*1rem)] h-14 rounded-full flex justify-between items-center px-3 pointer-events-none
-	// 	@apply transition-all
-	// 	// &:not(.active)
-	// 	// 	@apply opacity-0
-	// 	svg
-	// 		@apply stroke-white
-	// 	.hand
-	// 		animation: moveSwipeGesture 2.25s infinite ease-in-out
-	// 		@apply md:w-12 md:h-12 w-10 h-10
+	.indicator-swipe
+		&:not(.custom)
+			@apply absolute bottom-[3.9rem]  right-[12.5rem]
+		background: rgba(0, 0, 0, 0.40)
+		border: 1px solid rgba(255, 255, 255, 0.40)
+		@apply z-30 w-[calc(104/19.2*1rem)] h-11 rounded-full flex justify-between items-center px-3 pointer-events-none
+		@apply transition-all
+		&:not(.active)
+			@apply opacity-0
+		svg
+			@apply stroke-white
+		.hand
+			animation: moveSwipeGesture 2.25s infinite ease-in-out
+			@apply md:w-12 md:h-12 w-10 h-10
 	@keyframes moveSwipeGesture
 		0%
 			transform: translateX(-8px)
