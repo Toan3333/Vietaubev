@@ -1,0 +1,15 @@
+.about-4
+	mix-blend-mode: soft-light
+	background-position: unset !important
+	@apply bg-Primary-Red  relative object-cover z-20 rem:h-[688px]
+	&::before
+		content: ""
+		@apply w-full top-0 left-0 h-full bg-black/30 absolute -z-1
+	.about-4-item
+		@apply bg-Neutral-White border flex flex-col   py-10 px-5 rounded-2xl 
+		.content
+			@apply mt-3 flex flex-col flex-1
+			.bottom
+				@apply flex flex-col flex-1 mt-auto
+			.top
+				@apply mb-auto

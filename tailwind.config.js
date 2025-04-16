@@ -290,6 +290,7 @@ module.exports = {
 			},
 			boxShadow: {
 				"Dropshadow-Light": "4px 4px 24px 0px rgba(0,0,0,0.08)",
+				"Dropshadow-red": "4px 4px 24px 0px rgba(139, 1, 1, 0.20)",
 				"Dropshadow-Medium": "4px 8px 8px 4px rgba(0,0,0,0.12)",
 				"Dropshadow-Hard": "0px 10px 10px 0px rgba(0,0,0,0.2)",
 				"Background Blur": "",

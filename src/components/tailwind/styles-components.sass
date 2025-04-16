@@ -1,4 +1,7 @@
 @layer components
+	.home
+		.footer
+			@apply mt-[-17rem]
 	.item-comp
 		@apply flex
 	.button-primary
@@ -68,11 +71,15 @@
 			.product-content
 				.top h3
 					@apply text-Primary-Red
-	
-
-
-
-
+	.page-numbers
+		@apply flex-center gap-3
+		li
+			a
+				@apply w-10 h-10 rounded-1 bg-transparent border border-Neutral-100 inline-flex items-center justify-center text-lg font-bold
+				&.active
+					@apply bg-Primary-Red text-Neutral-White
+				&:hover
+					@apply bg-Primary-Red text-Neutral-White
 	.button-to-top
 		@apply opacity-0 pointer-events-none
 		&.active

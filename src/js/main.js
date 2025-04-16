@@ -18,7 +18,13 @@ $(document).ready(function () {
 	// showMenu();
 	// countUpInit();
 	indicatorSlide();
+	toggleCheckbox();
 	console.log("ok");
+
+	$(".product-item-heading").on("click", function () {
+		$(this).next(".product-main").slideToggle();
+		$(this).find(".icon-left i").toggleClass("fa-chevron-down fa-chevron-up");
+	});
 });
 
 export function indicatorSlide() {
@@ -40,6 +46,18 @@ export function indicatorSlide() {
 			observer.observe(item);
 		});
 	}
+}
+
+export function toggleCheckbox() {
+	document.querySelectorAll(".product-checkbox").forEach((checkbox) => {
+		// Đảm bảo checkbox không có class "checked" khi mới load
+		checkbox.classList.remove("checked");
+
+		// Thêm sự kiện click để toggle class "checked"
+		checkbox.addEventListener("click", function () {
+			this.classList.toggle("checked");
+		});
+	});
 }
 
 // fancyfox popup

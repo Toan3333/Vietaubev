@@ -15,15 +15,16 @@
 				a
 					display: grid
 					position: relative
-					grid-template-columns: 3.125rem 1fr
+					grid-template-columns: 2rem 1fr
 					align-items: center
 					justify-content: center
-					transform: translateY(calc(100% - 3.125rem))
+					transform: translateY(calc(100% - 2rem))
 					transform-origin: top
 					transition: all .3s
 					border-radius: .20833rem 0 0 .20833rem
 					background-color: #ffc300
-					height: 3.125rem
+					height: 32px
+					width: 32px
 					pointer-events: auto
 					color: #fff
 					text-decoration: none
@@ -37,7 +38,7 @@
 					flex-direction: column
 					position: relative
 					top: 0
-					transform: translateY(calc(100% - 3.125rem)) 
+					transform: translateY(calc(100% - 2rem)) 
 					align-items: center
 					justify-content: center
 					width: auto
@@ -50,13 +51,15 @@
 					text-decoration: none
 
 					a
-						height: 3.125rem
+						height: 2rem
+						padding: 8px
 						display: flex
 						align-items: center
 						justify-content: center
 						width: 100%
 						text-decoration: none
 						color: #fff
+						@apply rounded-1
 
 						&:hover
 							@apply border-none

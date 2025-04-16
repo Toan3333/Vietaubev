@@ -1,0 +1,65 @@
++Banner()
+section.global-breadcrumb
+	.container
+		nav(aria-label="breadcrumbs", class="rank-math-breadcrumb")
+			p
+				a(href="https://oracle.webcanhcam.vn") Trang chủ
+				span(class="separator")  | 
+				span(class="last") Về chúng tôi 
+section.product(class="section-py relative ")
+	.container
+		.product-heading 
+			.left 
+				h2(class="title-36") Rượu mạnh
+			.right 
+				.product-right-select
+					.select-view 
+						label(for="view") Sắp xếp theo
+						.select-view-item(class="relative rem:w-[190px]")
+							select#view(name="view") 
+								option(value="Tất cả") Tất cả
+								option(value="12") 24
+								option(value="12") 36 
+								option(value="12") 48 
+							.icon(class="absolute right-6 top-2/4 -translate-y-2/4 cursor-pointer pointer-events-none text-Primary-1") 
+								i.fa-regular.fa-chevron-down
+	.product-wrap(class="flex gap-base rem:px-[260px]")
+		.col-left(class="w-3/12 ")
+			.product-category(class="flex items-center  gap-3 w-full")
+				.product-item(class="cursor-pointer w-full") 
+					.product-item-heading(class="flex items-center justify-between pb-2 border-b border-b-Neutral-200 mb-3") 
+						.left(class="flex items-center gap-3") 
+							.icon 
+								i.fa-solid.fa-wine-bottle
+							.title LOẠI RƯỢU
+						.icon-left
+							i.fa-solid.fa-chevron-down
+					.product-main(class="flex flex-col gap-3")
+						-for(var i = 0; i < 4; i++)
+							.product-list
+								.product-checkbox.checked
+									span.product-display-value Beige
+								.product-color 
+									span
+		.col-right(class="w-9/12")
+			.col-right-product-list(class="grid grid-cols-3 gap-base")
+				-for(var i = 0; i <= 15; i++)
+					+ProductItem()
+			.pagination(class="mt-base")
+				ul.page-numbers
+					li 
+						a.active(href="#") 1 
+					li 
+						a(href="#") 2
+					li 
+						a(href="#") 3
+			.format-content 
+				.desc 
+					p Rượu mạnh từ lâu đã trở thành thức uống được nhiều tín đồ sành rượu quan tâm. Đây cũng chính là nguyên liệu không thể thiếu góp phần tạo ra hàng trăm ly cocktail độc đáo. Từ một số loại Whisky đậm đà của Scotland đến rượu Vodka truyền thống của Nga, danh mục rượu mạnh đa dạng với nhiều sự lựa chọn để thỏa mãn cả những người yêu thích hương vị truyền thống và những người thích sự mới mẻ và độc đáo. Trong bài viết dưới đây, cùng Rượu Vang Nhập tìm hiểu chi tiết về rượu mạnh nhé!
+				h2(class="text-2xl font-bold text-Primary-Red") 1. Rượu mạnh là gì?
+				.image 
+					img(src="./img/1.jpg", alt="")
+				.desc 
+					p Mỗi loại rượu mạnh đều trải qua quá trình ngâm ủ, lên men và chưng cất để tạo ra hương vị đặc trưng, mê hoặc người uống. Mặc dù phương pháp chế biến cơ bản khá tương đồng, nhưng mỗi nhà sản xuất lại có bí quyết riêng để tạo ra sự khác biệt trong từng loại rượu. Từ đó, người hâm mộ rượu có cơ hội thưởng thức và trải nghiệm sự đa dạng, phong phú của thế giới rượu mạnh.
+				.button-more(class="flex-center") 
+					+btnPrimary()

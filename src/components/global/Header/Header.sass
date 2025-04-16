@@ -25,13 +25,13 @@
 			&:hover
 				@apply bg-Primary-Red text-Neutral-White
 	.header-bottom
-		@apply pb-3
+		
 		.header-nav
-			@apply flex justify-between w-full
+			@apply flex justify-between w-full h-full
 			li
 				@apply relative
 				a
-					@apply font-semibold text-Primary-Dark-Gray pb-2 border-b-2 border-transparent relative uppercase
+					@apply font-semibold text-Primary-Dark-Gray border-b-2 border-transparent relative uppercase h-full flex items-center gap-2 rem:text-[16px]
 					&.active
 						@apply text-Primary-Red border-b-2 border-b-Primary-Red
 					&:hover
