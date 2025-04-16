@@ -1,0 +1,94 @@
+.product-detail
+	// .col-left
+	// 	.swiper
+	// 		.item
+	// 			@apply 
+
+	.product-detail-image
+		.swiper
+			.swiper-slide
+				@apply w-full #{!important}
+	.col-left
+		.product-detail-gallary
+			@apply  flex-shrink-0
+			.wrapper
+				@apply h-full rem:py-[50px]
+				.swiper
+					@apply w-full h-full py-2
+
+					.swiper-slide
+						img
+							@apply border border-Neutral-100 rounded-lg  transition-all duration-300
+						&.swiper-slide-thumb-active
+							img
+								@apply border border-Primary-Red
+			.arrow-button
+				@apply absolute h-full flex flex-col justify-between w-full items-center
+				.btn-sw-1
+					background-color: unset !important
+					&:hover
+						@apply bg-transparent
+					
+					&.btn-prev
+						&::before
+							content: '\f077'
+							@apply text-Primary-Red
+					&.btn-next
+						&::before
+							content: '\f078'
+							@apply text-Primary-Red
+	.col-right
+		.product-detail-heading
+			@apply rem:mb-[18px]
+		.product-detail-weight
+			@apply mb-base
+			span
+				@apply rounded-1 rem:py-[6px] px-4 border border-Primary-Red text-lg font-semibold text-Primary-Red cursor-pointer
+				&.active
+					@apply bg-Primary-Red text-Neutral-White
+		.product-detail-social 
+			@apply mt-base flex items-center rem:gap-[10px]
+			a
+				@apply w-10 h-10 rounded-[2px] bg-Neutral-White inline-flex items-center justify-center text-Primary-Red
+				&:hover
+					@apply bg-Primary-Red text-Neutral-White
+		.product-detail-body
+			@apply rem:mb-[30px]
+			.column
+				@apply rem:w-[139px] rem:gap-[10px] flex pr-6 border-r border-r-Neutral-100 last:border-none last:pr-0
+				.icon
+					@apply rem:w-[26px] rem:h-[26px] flex-shrink-0 text-Primary-Red rem:text-[16px]
+				.top
+					h4
+						@apply text-Neutral-400 font-normal capitalize rem:text-[16px] mb-1
+				.bottom
+					h4
+						@apply font-normal capitalize  rem:text-[16px] text-Primary-Red
+		.product-detail-info
+			@apply flex flex-col gap-5
+			span
+				&.active
+					@apply bg-Primary-Red text-Neutral-White
+		.product-detail-share
+			.social
+				@apply flex items-center gap-2
+				a
+					@apply w-10 h-10 inline-flex items-center justify-center rounded-1 bg-Neutral-50
+					i
+						letter-spacing: 0.32px
+						@apply font-normal text-Primary-Red
+			.button-zalo 
+				a
+					@apply w-full inline-flex items-center justify-center rem:py-[10px] px-5 rounded-1 bg-[#3888FC] text-sm text-Neutral-White font-semibold rem:gap-[10px]
+.product-detail-2
+	.swiper
+		.item
+			.content
+				@apply mt-5
+				h3
+					@apply relative text-2xl font-bold text-Primary-Red
+					&::before
+						content: ""
+						@apply absolute left-0 -bottom-3 w-15 h-[3px] bg-Primary-Red
+				.desc
+					@apply mt-5

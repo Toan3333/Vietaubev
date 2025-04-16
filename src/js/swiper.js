@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Autoplay, Navigation, EffectFade, Scrollbar, Grid } from "swiper/modules";
+import { Autoplay, Navigation, EffectFade, Scrollbar, Grid, Thumbs } from "swiper/modules";
 /**
  * @param swiperInit
  */
@@ -10,6 +10,8 @@ export function swiperInit() {
 	swiperAbout5();
 	swiperAbout7();
 	swiperHome9();
+	swiperProductDetail();
+	swiperProductDetail2();
 }
 function swiperBanner() {
 	const swiper = new Swiper(".swiper-home-banner", {
@@ -30,65 +32,69 @@ function swiperBanner() {
 	});
 }
 
-// function swiperProductDetail() {
-// 	const colLeft = document.querySelector(".col-left");
-// 	if (!colLeft) return;
+function swiperProductDetail() {
+	const colLeft = document.querySelector(".col-left");
+	if (!colLeft) return;
 
-// 	const thumb = colLeft.querySelector(".swiper-product-detail-thumb");
-// 	const main = colLeft.querySelector(".swiper-product-detail");
-// 	const prevBtn = colLeft.querySelector(".btn-prev");
-// 	const nextBtn = colLeft.querySelector(".btn-next");
+	const thumb = colLeft.querySelector(".swiper-product-detail-thumb");
+	const main = colLeft.querySelector(".swiper-product-detail");
+	const prevBtn = colLeft.querySelector(".btn-prev");
+	const nextBtn = colLeft.querySelector(".btn-next");
 
-// 	const swiperThumb = new Swiper(thumb, {
-// 		modules: [Autoplay],
-// 		spaceBetween: 12,
-// 		slidesPerView: 3.5,
-// 		freeMode: true,
-// 		watchSlidesProgress: true,
-// 		loop: false,
-// 		breakpoints: {
-// 			768: {
-// 				slidesPerView: 3,
-// 				spaceBetween: 24,
-// 				direction: "vertical",
-// 			},
-// 			1024: {
-// 				spaceBetween: 15,
-// 				slidesPerView: 5,
-// 				direction: "vertical",
-// 			},
-// 			1200: {
-// 				spaceBetween: 15,
-// 				slidesPerView: 5,
-// 				direction: "vertical",
-// 			},
-// 		},
-// 	});
+	const swiperThumb = new Swiper(thumb, {
+		modules: [Autoplay],
+		spaceBetween: 12,
+		slidesPerView: 3.5,
+		freeMode: true,
+		observer: true,
+		observeParents: true,
+		watchSlidesProgress: true,
+		loop: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 24,
+				direction: "vertical",
+			},
+			1024: {
+				spaceBetween: 15,
+				slidesPerView: 5,
+				direction: "vertical",
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+				direction: "vertical",
+			},
+		},
+	});
 
-// 	const swiperDetail = new Swiper(main, {
-// 		spaceBetween: 10,
-// 		loop: false,
-// 		modules: [Autoplay, Navigation, Thumbs],
-// 		thumbs: {
-// 			swiper: swiperThumb,
-// 		},
-// 		navigation: {
-// 			nextEl: nextBtn,
-// 			prevEl: prevBtn,
-// 		},
-// 	});
+	const swiperDetail = new Swiper(main, {
+		spaceBetween: 10,
+		loop: true,
+		observer: true,
+		observeParents: true,
+		modules: [Autoplay, Navigation, Thumbs],
+		thumbs: {
+			swiper: swiperThumb,
+		},
+		navigation: {
+			nextEl: nextBtn,
+			prevEl: prevBtn,
+		},
+	});
 
-// 	window.productDetailSwiper = {
-// 		element: colLeft,
-// 		swiperThumb,
-// 		swiperDetail,
-// 	};
+	window.productDetailSwiper = {
+		element: colLeft,
+		swiperThumb,
+		swiperDetail,
+	};
 
-// 	const weightOptions = document.querySelectorAll(".product-detail-weight-list span");
-// 	if (weightOptions.length > 0) {
-// 		weightOptions[0].classList.add("active");
-// 	}
-// }
+	const weightOptions = document.querySelectorAll(".product-detail-weight-list span");
+	if (weightOptions.length > 0) {
+		weightOptions[0].classList.add("active");
+	}
+}
 
 function swiperBrand() {
 	const swiper = new Swiper(".brand-swiper", {
@@ -151,6 +157,34 @@ function swiperAbout7() {
 			1200: {
 				slidesPerView: 6,
 				spaceBetween: 40,
+			},
+		},
+	});
+}
+
+function swiperProductDetail2() {
+	const swiper = new Swiper(".product-detail-2-swiper", {
+		slidesPerView: 3,
+		modules: [Autoplay, Navigation], // Đảm bảo đã import EffectFade
+		loop: true,
+
+		// autoplay: {
+		// 	delay: 3500,
+		// 	disableOnInteraction: false,
+		// },
+		speed: 1500,
+		navigation: {
+			nextEl: ".product-detail-2 .btn-next",
+			prevEl: ".product-detail-2 .btn-prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
+
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 100,
 			},
 		},
 	});
