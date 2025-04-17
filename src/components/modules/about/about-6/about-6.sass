@@ -1,6 +1,6 @@
 .about-6
 	.about-6-list
-		@apply rem:w-[856px]
+		@apply md:rem:w-[856px] w-full
 		.item
 			border: 1px solid rgba(255, 255, 255, 0.30)
 			@apply rounded-2xl py-15 px-5 bg-black/20 flex flex-col
@@ -14,3 +14,8 @@
 						@apply text-xl font-bold text-Neutral-White mb-3 
 				.bottom
 					@apply mt-auto font-normal text-Neutral-White flex flex-col flex-1
+@media (max-width: 767.98px)
+	.about-6
+		.about-6-list
+			.item
+				@apply p-5

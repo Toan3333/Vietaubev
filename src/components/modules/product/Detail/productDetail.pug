@@ -5,11 +5,12 @@ section.global-breadcrumb
 				a(href="https://oracle.webcanhcam.vn") Trang chủ
 				span(class="separator")  | 
 				span(class="last") Về chúng tôi 
-section.product-detail(class="section-py")
+
+section.product-detail(class="section-py ")
 	.container
 		.product-detail-main(class="inline-flex flex-col lg:flex-row gap-base")
-			.col-left(class="lg:rem:w-[680px]  w-full flex flex-col-reverse md:flex-row gap-5" data-index="0")
-				.product-detail-gallary(class="xl:w-25 md:rem:w-[150px] relative")
+			.col-left(class="lg:rem:w-[680px] lg:rem:h-[593px] w-full flex flex-col-reverse md:flex-row gap-5" data-index="0")
+				.product-detail-gallary(class="xl:w-25 md:rem:w-[150px] w-full relative")
 					.wrapper(class="absolute inset-0 w-full h-full")
 						.swiper.swiper-product-detail-thumb 
 							.swiper-wrapper
@@ -49,31 +50,31 @@ section.product-detail(class="section-py")
 						.swiper-wrapper
 							.swiper-slide
 								.image
-									a(class="img-ratio-center ratio:pt-[593_560] lozad") 
+									a(class="ratio-contain  ratio:pt-[593_560] lozad") 
 										img(src="./img/product.png", alt="")
 							.swiper-slide
 								.image
-									a(class="img-ratio-center ratio:pt-[593_560] lozad") 
+									a(class="ratio-contain ratio:pt-[593_560] lozad") 
 										img(src="./img/product.png", alt="")
 							.swiper-slide
 								.image
-									a(class="img-ratio-center ratio:pt-[593_560]") 
+									a(class="ratio-contain ratio:pt-[593_560]") 
 										img(src="./img/product.png", alt="")
 							.swiper-slide
 								.image
-									a(class="img-ratio-center ratio:pt-[593_560]") 
+									a(class=" ratio-contain ratio:pt-[593_560]") 
 										img(src="./img/product.png", alt="")
 							.swiper-slide
 								.image
-									a(class="img-ratio-center ratio:pt-[593_560]") 
+									a(class="ratio-contain ratio:pt-[593_560]") 
 										img(src="./img/product.png", alt="")
 							.swiper-slide
 								.image
-									a(class="img-ratio-center ratio:pt-[593_560]") 
+									a(class="ratio-contain ratio:pt-[593_560]") 
 										img(src="./img/product.png", alt="")
 							.swiper-slide
 								.image
-									a(class="img-ratio  ratio-contain") 
+									a(class="ratio-contain ratio:pt-[593_560]") 
 										img(src="./img/product.png", alt="")
 			.col-right(class="lg:w-[calc(100%-35.41666666666667rem-2.08333rem)] w-full") 
 				.product-detail-heading
@@ -84,7 +85,7 @@ section.product-detail(class="section-py")
 				.desc(class="text-lg font-normal text-Neutral-Black mb-base") 
 					p REMY MARTIN 300th Years Anniversary là sản phẩm được giới chuyên môn đánh giá cao cả về chất lượng lẫn hình thức. Loại rượu này được pha chế từ nhiều loại rượu chưng cất lâu năm, trưởng thành trong những thùng gỗ sồi cao cấp, mang lại hương vị phong phú và mạnh mẽ.
 				.product-detail-body
-					.product-detail-body-list(class="grid grid-cols-4 gap-7")
+					.product-detail-body-list(class="grid md:grid-cols-4 grid-cols-2 gap-7")
 						.column 
 							.icon 
 								i.fa-solid.fa-earth-americas
@@ -117,15 +118,15 @@ section.product-detail(class="section-py")
 									h4 XUẤT XỨ
 								.bottom
 									h4 Pháp
-				.product-detail-info(class="rem:w-[525px]")
+				.product-detail-info(class="lg:rem:w-[525px] w-full")
 					.product-detail-ml(class="flex items-center rem:gap-[19px]") 
 						.title(class="font-bold text-Neutral-Black") Thể tích
 						.wrapper(class="flex items-center rem:gap-[14px]")
 							span.active(class="rem:p-[10px] rounded-1 border border-Neutral-100") 700ml
 							span(class="rem:p-[10px] rounded-1 border border-Neutral-100") 1 Lit
 							span(class="rem:p-[10px] rounded-1 border border-Neutral-100") 700ml
-					.product-detail-quantity(class="flex items-center gap-5") 
-						.left(class="flex items-center rem:gap-[14px] rem:w-[264px]") 
+					.product-detail-quantity(class="flex md:flex-row items-start flex-col md:items-center gap-5") 
+						.left(class="flex items-center rem:gap-[14px] lg:rem:w-[264px] w-2/4") 
 							.title(class="whitespace-nowrap font-bold") Số lượng
 							.quantity(class="flex items-center h-12") 
 								button.minus(class="w-12 h-12 rounded-tl-lg border-t border-t-Neutral-100 border-b-Neutral-100 border-l-Neutral-100 bg-Neutral-50 inline-flex rounded-bl-lg items-center justify-center") 
@@ -134,14 +135,14 @@ section.product-detail(class="section-py")
 									input(type="text" value="1" class="w-full bg-Neutral-White border-t border-t-Neutral-100 border-Neutral-100 border-b border-b-Neutral-100 h-full")
 								button.plus(class="w-12 h-12 rounded-tr-lg  border-t border-t-Neutral-100 border-b-Neutral-100 border-l-Neutral-100 bg-Neutral-50 inline-flex rounded-br-lg items-center justify-center") 
 									i.fa-solid.fa-plus
-						.right(class="w-[calc(100%-13.75rem-0.7291666666666667rem)]") 
+						.right(class="lg:w-[calc(100%-13.75rem-0.7291666666666667rem)] w-full md:w-2/4") 
 							.button
 								a(href="#" class="btn-add-cart")  
 									span THÊM VÀO GIỎ HÀNG
 									.icon 
 										i.fa-regular.fa-cart-flatbed-boxes
-					.product-detail-share(class="flex items-center rem:gap-[19px]") 
-						.left(class="rem:w-[221px] flex items-center gap-6")
+					.product-detail-share(class="flex flex-col md:flex-row items-center rem:gap-[19px]") 
+						.left(class="lg:rem:w-[221px] md:w-2/4 w-full flex items-center gap-6")
 							.title(class="whitespace-nowrap text-black font-bold") Số lượng
 							.social 
 								a(href="#")
@@ -150,7 +151,7 @@ section.product-detail(class="section-py")
 									i.fa-brands.fa-facebook-f
 								a(href="#")
 									i.fa-brands.fa-facebook-f
-						.right(class="w-[calc(100%-11.510416666666668rem-0.9895833333333334rem)]")
+						.right(class="lg:w-[calc(100%-11.510416666666668rem-0.9895833333333334rem)] w-full md:w-2/4")
 							.button-zalo 
 								a(href="#")
 									span Liên hệ tư vấn
@@ -159,49 +160,115 @@ section.product-detail(class="section-py")
 section.product-detail-2(class="section-py bg-Primary-Silver relative")
 	h2(class="text-center text-32 font-medium text-Primary-Dark-Gray mb-base") Hương vị sản phẩm
 	.container 
-		.swiper.product-detail-2-swiper 
+		.slide(class="relative")
+			.swiper.product-detail-2-swiper 
+				.swiper-wrapper 
+					.swiper-slide 
+						.item(class="rem:w-[400px] relative group")
+							.image-wrapper(class="relative h-[400px] transition-all duration-500 ease-in-out group-hover:h-[360px] overflow-hidden rounded-2xl")
+								a(href="#" class="block h-full")
+									img(src="./img/1.png", alt="" class="w-full h-full object-cover object-bottom transition-all duration-300")
+							.content 
+								h3 
+									a(href="#") Blackberry
+								.desc(class="text-lg font-normal text-Neutral-Black mt-3 transition-all duration-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0") 
+									p A juicy and sweet opening note that adds a delicious balance of fresh and warm
+
+					.swiper-slide 
+						.item(class="rem:w-[400px] relative group")
+							.image-wrapper(class="relative h-[400px] transition-all duration-500 ease-in-out group-hover:h-[360px] overflow-hidden rounded-2xl")
+								a(href="#" class="block h-full")
+									img(src="./img/1.png", alt="" class="w-full h-full object-cover object-bottom transition-all duration-300")
+							.content 
+								h3 
+									a(href="#") Blackberry
+								.desc(class="text-lg font-normal text-Neutral-Black mt-3 transition-all duration-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0") 
+									p A juicy and sweet opening note that adds a delicious balance of fresh and warm
+					.swiper-slide 
+						.item(class="rem:w-[400px] relative group")
+							.image-wrapper(class="relative h-[400px] transition-all duration-500 ease-in-out group-hover:h-[360px] overflow-hidden rounded-2xl")
+								a(href="#" class="block h-full")
+									img(src="./img/1.png", alt="" class="w-full h-full object-cover object-bottom transition-all duration-300")
+							.content 
+								h3 
+									a(href="#") Blackberry
+								.desc(class="text-lg font-normal text-Neutral-Black mt-3 transition-all duration-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0") 
+									p A juicy and sweet opening note that adds a delicious balance of fresh and warm
+					.swiper-slide 
+						.item(class="rem:w-[400px] relative group")
+							.image-wrapper(class="relative h-[400px] transition-all duration-500 ease-in-out group-hover:h-[360px] overflow-hidden rounded-2xl")
+								a(href="#" class="block h-full")
+									img(src="./img/1.png", alt="" class="w-full h-full object-cover object-bottom transition-all duration-300")
+							.content 
+								h3 
+									a(href="#") Blackberry
+								.desc(class="text-lg font-normal text-Neutral-Black mt-3 transition-all duration-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0") 
+									p A juicy and sweet opening note that adds a delicious balance of fresh and warm
+			.wrap-button-slide
+				.btn.btn-prev.btn-sw-1
+				.btn.btn-next.btn-sw-1
+section.product-detail-3(class="py-10")
+	.container
+		.content(class="xl:rem:w-[1320px] mx-auto p-10 bg-Neutral-50 w-full")
+			h3 1. Sâu lắng và mềm mại cùng hương vị ấn tượng của REMY MARTIN 300th Years Anniversary
+			.desc(class="flex flex-col rem:gap-[29px] text-lg font-normal text-Neutral-Black") 
+				p Với mỗi chai rượu Cognac, hương vị chính là điểm mà người dùng chờ đợi nhất. Trong cả ngàn phiên bản rượu mạnh trên toàn cầu, mỗi dòng rượu sẽ mang đến những hương vị khác nhau. Đó chính là điểm đặc biệt để nhận biết được thương hiệu này với thương hiệu khác. Và nó cũng chính là điểm tạo nên dấu ấn và sự khác biệt cho từng dòng rượu.
+				p Với mỗi chai rượu Cognac, hương vị chính là điểm mà người dùng chờ đợi nhất. Trong cả ngàn phiên bản rượu mạnh trên toàn cầu, mỗi dòng rượu sẽ mang đến những hương vị khác nhau. Đó chính là điểm đặc biệt để nhận biết được thương hiệu này với thương hiệu khác. Và nó cũng chính là điểm tạo nên dấu ấn và sự khác biệt cho từng dòng rượu.
+			.image 
+				a(href="#" class="img-ratio ratio:pt-[740_1320] lozad")
+					img(src="./img/1.jpg", alt="") 
+			.button(class="rem:mt-[29px] flex-center") 
+				+btnPrimary()
+section.product-detail-4(class="section-py overflow-hidden")
+	.container 
+		h2(class="title-36 mb-base") sản phẩm đã xem
+		.swiper.product-swiper 
 			.swiper-wrapper 
 				.swiper-slide 
-					.item(class="rem:w-[400px] relative group")
-						.image-wrapper(class="relative h-[400px] transition-all duration-500 ease-in-out group-hover:h-[360px] overflow-hidden rounded-2xl")
-							a(href="#" class="block h-full")
-								img(src="./img/1.png", alt="" class="w-full h-full object-cover object-bottom transition-all duration-300")
-						.content 
-							h3 
-								a(href="#") Blackberry
-							.desc(class="text-lg font-normal text-Neutral-Black mt-3 transition-all duration-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0") 
-								p A juicy and sweet opening note that adds a delicious balance of fresh and warm
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+			.product-detail-4-scroll(class="mt-base")
+				.swiper-scrollbar
+		.home-3-btn(class="mt-base flex-center")
+			+btnPrimary()
+section.product-detail-5(class="section-py bg-neutral-50 overflow-hidden")
+	.container 
+		h2(class="title-36 mb-base") sản phẩm đã xem
+		.swiper.product-swiper 
+			.swiper-wrapper 
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+				.swiper-slide 
+					+ProductItem()
+			.product-detail-5-scroll(class="mt-base")
+				.swiper-scrollbar
+			
 
-				.swiper-slide 
-					.item(class="rem:w-[400px] relative group")
-						.image-wrapper(class="relative h-[400px] transition-all duration-500 ease-in-out group-hover:h-[360px] overflow-hidden rounded-2xl")
-							a(href="#" class="block h-full")
-								img(src="./img/1.png", alt="" class="w-full h-full object-cover object-bottom transition-all duration-300")
-						.content 
-							h3 
-								a(href="#") Blackberry
-							.desc(class="text-lg font-normal text-Neutral-Black mt-3 transition-all duration-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0") 
-								p A juicy and sweet opening note that adds a delicious balance of fresh and warm
-				.swiper-slide 
-					.item(class="rem:w-[400px] relative group")
-						.image-wrapper(class="relative h-[400px] transition-all duration-500 ease-in-out group-hover:h-[360px] overflow-hidden rounded-2xl")
-							a(href="#" class="block h-full")
-								img(src="./img/1.png", alt="" class="w-full h-full object-cover object-bottom transition-all duration-300")
-						.content 
-							h3 
-								a(href="#") Blackberry
-							.desc(class="text-lg font-normal text-Neutral-Black mt-3 transition-all duration-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0") 
-								p A juicy and sweet opening note that adds a delicious balance of fresh and warm
-				.swiper-slide 
-					.item(class="rem:w-[400px] relative group")
-						.image-wrapper(class="relative h-[400px] transition-all duration-500 ease-in-out group-hover:h-[360px] overflow-hidden rounded-2xl")
-							a(href="#" class="block h-full")
-								img(src="./img/1.png", alt="" class="w-full h-full object-cover object-bottom transition-all duration-300")
-						.content 
-							h3 
-								a(href="#") Blackberry
-							.desc(class="text-lg font-normal text-Neutral-Black mt-3 transition-all duration-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0") 
-								p A juicy and sweet opening note that adds a delicious balance of fresh and warm
-	.arrow-button(class="flex absolute left-0 top-2/4 -translate-y-2/4 gap-3 justify-between  items-center w-full rem:px-[172px]  z-10")
-		.btn.btn-prev.btn-sw-1
-		.btn.btn-next.btn-sw-1
+		.home-3-btn(class="mt-base flex-center")
+			+btnPrimary()
+

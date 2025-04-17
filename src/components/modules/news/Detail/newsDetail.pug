@@ -1,0 +1,40 @@
+section.global-breadcrumb
+	.container
+		nav(aria-label="breadcrumbs", class="rank-math-breadcrumb")
+			p
+				a(href="https://oracle.webcanhcam.vn") Trang chủ
+				span(class="separator")  | 
+				span(class="last") Về chúng tôi 
+section.news-detail(class="section-py")
+	.container 
+		.news-detail-content(class="lg:rem:w-[1176px] mx-auto w-full")
+			h1(class="title-36 mb-5") Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, neque.
+			.wrap-line-date(class="flex items-center gap-5 mb-5")
+				a(href="#" class="text-sm text-Primary-Red hover:underline") Tin tức
+				a(href="#" class="text-sm text-Primary-Red hover:underline") Tin visante
+				date(class="text-sm font-medium text-[#818285]") 21/01/2025
+				.line(class="bg-Neutral-200 flex-1 h-[1px]")
+			.format-content
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis id aperiam fuga soluta animi modi omnis adipisci accusantium quam iusto! Error omnis hic nisi repellendus placeat alias minima doloremque vel.
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat odio maiores culpa omnis enim! Eveniet sunt obcaecati fugit nesciunt rem voluptatum accusamus perferendis! Voluptatum quas magni quo, veniam aperiam consectetur?
+section.news-detail-2(class="section-py bg-Primary-Silver")
+	.container
+		h2(class="text-2xl mb-5")
+		.news-detail-2-slide(class="relative") 
+			.swiper.other-news-swiper 
+				.swiper-wrapper
+					-for(var i = 0; i < 8; i++) 
+						.swiper-slide
+							.item-news(class="group")
+								.image(class="mb-6") 
+									a(href="#" class="img-ratio ratio:pt-[212_320] lozad zoom-img rounded-lg")
+										img(src="./img/1.jpg", alt="") 
+								.content(class="flex flex-col gap-3")
+									date(class=" text-Neutral-300") 14/04/2025
+									h2(class="text-lg line-clamp-2 font-medium group-hover:text-Primary-Red transition-all") 
+										a(href="#") Làm sao để da không bị mụn? Bí quyết giữ da luôn khỏe đẹp 
+									.desc(class="text-sm text-neutral-500 line-clamp-3") Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium numquam culpa repudiandae officia quisquam fugiat, distinctio consequatur soluta vero illo odit facilis natus enim minus atque voluptatibus aliquid quidem nostrum!
+			.wrap-button-slide
+				.btn.btn-prev.btn-sw-1
+				.btn.btn-next.btn-sw-1
+				

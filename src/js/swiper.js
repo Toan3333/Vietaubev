@@ -7,11 +7,13 @@ export function swiperInit() {
 	swiperProduct();
 	swiperBrand();
 	swiperBanner();
+	swiperBannerMobile();
 	swiperAbout5();
 	swiperAbout7();
 	swiperHome9();
 	swiperProductDetail();
 	swiperProductDetail2();
+	swiperOtherNews();
 }
 function swiperBanner() {
 	const swiper = new Swiper(".swiper-home-banner", {
@@ -20,7 +22,7 @@ function swiperBanner() {
 		slidesPerView: 1,
 		speed: 1500,
 		loop: true,
-		// effect: "fade",
+		effect: "fade",
 		autoplay: {
 			delay: 3500,
 		},
@@ -29,6 +31,20 @@ function swiperBanner() {
 			prevEl: ".home-1 .btn-prev",
 		},
 		loop: true,
+	});
+}
+
+function swiperBannerMobile() {
+	const swiper = new Swiper(".swiper-home-banner-mobile", {
+		slidesPerView: 1,
+		modules: [Autoplay, EffectFade], // Đảm bảo đã import EffectFade
+		loop: true,
+		effect: "fade",
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		speed: 1500,
 	});
 }
 
@@ -49,16 +65,17 @@ function swiperProductDetail() {
 		observer: true,
 		observeParents: true,
 		watchSlidesProgress: true,
+
 		loop: true,
 		breakpoints: {
 			768: {
-				slidesPerView: 4,
-				spaceBetween: 24,
+				slidesPerView: 3,
+				spaceBetween: 16,
 				direction: "vertical",
 			},
 			1024: {
 				spaceBetween: 15,
-				slidesPerView: 5,
+				slidesPerView: 3,
 				direction: "vertical",
 			},
 			1200: {
@@ -71,6 +88,8 @@ function swiperProductDetail() {
 
 	const swiperDetail = new Swiper(main, {
 		spaceBetween: 10,
+		slidesPerView: 1,
+
 		loop: true,
 		observer: true,
 		observeParents: true,
@@ -89,26 +108,21 @@ function swiperProductDetail() {
 		swiperThumb,
 		swiperDetail,
 	};
-
-	const weightOptions = document.querySelectorAll(".product-detail-weight-list span");
-	if (weightOptions.length > 0) {
-		weightOptions[0].classList.add("active");
-	}
 }
 
 function swiperBrand() {
 	const swiper = new Swiper(".brand-swiper", {
-		slidesPerView: 3,
+		slidesPerView: 2,
 		modules: [Autoplay, Navigation, Grid], // Đảm bảo đã import EffectFade
-		loop: true,
+		loop: false,
 		grid: {
 			rows: 2, // Điều này sẽ tạo ra 2 hàng
 			fill: "row",
 		},
-		// autoplay: {
-		// 	delay: 3500,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			delay: 3500,
+			disableOnInteraction: false,
+		},
 		speed: 1500,
 		navigation: {
 			nextEl: ".home-8 .btn-next",
@@ -116,10 +130,12 @@ function swiperBrand() {
 		},
 		breakpoints: {
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 2,
+				spaceBetween: 24,
 			},
 			1024: {
-				slidesPerView: 5,
+				slidesPerView: 3,
+				spaceBetween: 30,
 			},
 			1200: {
 				slidesPerView: 4,
@@ -131,7 +147,9 @@ function swiperBrand() {
 
 function swiperAbout7() {
 	const swiper = new Swiper(".about-7-swiper", {
-		slidesPerView: 3,
+		slidesPerView: 2,
+		spaceBetween: 16,
+
 		modules: [Autoplay, Navigation, Grid], // Đảm bảo đã import EffectFade
 		// loop: true,
 		grid: {
@@ -149,10 +167,12 @@ function swiperAbout7() {
 		},
 		breakpoints: {
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 4,
+				spaceBetween: 20,
 			},
 			1024: {
-				slidesPerView: 4,
+				slidesPerView: 5,
+				spaceBetween: 20,
 			},
 			1200: {
 				slidesPerView: 6,
@@ -164,7 +184,9 @@ function swiperAbout7() {
 
 function swiperProductDetail2() {
 	const swiper = new Swiper(".product-detail-2-swiper", {
-		slidesPerView: 3,
+		slidesPerView: 1,
+		spaceBetween: 16,
+
 		modules: [Autoplay, Navigation], // Đảm bảo đã import EffectFade
 		loop: true,
 
@@ -179,12 +201,43 @@ function swiperProductDetail2() {
 		},
 		breakpoints: {
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 2,
+				spaceBetween: 16,
 			},
 
 			1200: {
 				slidesPerView: 3,
 				spaceBetween: 100,
+			},
+		},
+	});
+}
+
+function swiperOtherNews() {
+	const swiper = new Swiper(".other-news-swiper", {
+		slidesPerView: 1,
+		spaceBetween: 16,
+		modules: [Autoplay, Navigation], // Đảm bảo đã import EffectFade
+		loop: true,
+
+		autoplay: {
+			delay: 3500,
+			disableOnInteraction: false,
+		},
+		speed: 1500,
+		navigation: {
+			nextEl: ".news-detail-2 .btn-next",
+			prevEl: ".news-detail-2 .btn-prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 16,
+			},
+
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 40,
 			},
 		},
 	});
@@ -208,6 +261,11 @@ function swiperAbout5() {
 		breakpoints: {
 			768: {
 				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1024: {
+				slidesPerView: 3,
+				spaceBetween: 20,
 			},
 
 			1200: {
@@ -220,6 +278,7 @@ function swiperAbout5() {
 
 function swiperHome9() {
 	const swiper = new Swiper(".home-9-swiper", {
+		spaceBetween: 24,
 		slidesPerView: 2,
 		modules: [Autoplay, Navigation], // Đảm bảo đã import EffectFade
 		loop: true,
@@ -238,9 +297,11 @@ function swiperHome9() {
 		},
 		breakpoints: {
 			768: {
-				slidesPerView: 3,
+				spaceBetween: 20,
+				slidesPerView: 4,
 			},
 			1024: {
+				spaceBetween: 20,
 				slidesPerView: 5,
 			},
 			1200: {
@@ -253,7 +314,9 @@ function swiperHome9() {
 
 function swiperProduct() {
 	const swiper = new Swiper(".product-swiper", {
-		slidesPerView: 3,
+		slidesPerView: 2,
+		spaceBetween: 16,
+
 		modules: [Autoplay, Navigation, Scrollbar], // Đảm bảo đã import EffectFade
 		// loop: true,
 		scrollbar: {
@@ -272,13 +335,15 @@ function swiperProduct() {
 		breakpoints: {
 			768: {
 				slidesPerView: 3,
+				spaceBetween: 16,
 			},
 			1024: {
-				slidesPerView: 5,
+				spaceBetween: 20,
+				slidesPerView: 3.5,
 			},
 			1200: {
 				slidesPerView: 3.95,
-				spaceBetween: "40",
+				spaceBetween: 40,
 			},
 		},
 	});

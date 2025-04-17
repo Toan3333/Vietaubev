@@ -1,6 +1,7 @@
-footer.footer(class="rem:pb-[25px] pt-17 bg-Primary-Red z-100  relative")
+footer.footer(class="rem:pb-[25px] pt-17 bg-Primary-Red ")
+
 	.footer-bg(class="absolute top-0 left-2/4 -translate-x-2/4 rem:w-[505px] rem:h-[234px] lozad")
-		img(src="./img/bg-footer-2.png", alt="")
+		img(src="./img/bg-footer-2.png", alt="" class="w-full h-full object-cover")
 	.social-fixed(class="fixed overflow-hidden right-0 rem:bottom-[184px]  flex  flex-col z-30")
 		ul 
 			li 
@@ -28,16 +29,16 @@ footer.footer(class="rem:pb-[25px] pt-17 bg-Primary-Red z-100  relative")
 				.btn-submit 
 					button Gửi
 		.footer-bottom(class="rem:pt-[62px] pb-10") 
-			.footer-main(class="flex rem:gap-[120px]")
-				.footer-left(class="rem:w-[560px]")
+			.footer-main(class="flex flex-col lg:flex-row xl:rem:gap-[120px] gap-base")
+				.footer-left(class="xl:rem:w-[560px] lg:rem:w-[420px] w-full")
 					h3 CÔNG TY TNHH THỰC PHẨM ĐỒ UỐNG VIỆT ÂU
 					.footer-desc 
 						p Số 44 - 44A Đường Số 1, Khu Phố 2, Phường An Khánh, TP. Thủ Đức, TP.HCM Hotline: 028 3622 7777 - 0926 238 239 Email: nganle@vietnamasia.vn GPDKKD: 0314866431 do sở KH & ĐT TP.HCM cấp ngày 29/01/2018 Giấy phép phân phối rượu số 463/GP-BCT do Bộ Công Thương cấp ngày 05 tháng 09 năm 2023
 					.footer-image(class="rem:w-[171px] rem:h-[63px]") 
 						a(href="#" class="w-full h-full block lozad")
 							img(src="./img/bocongthuong.png", alt="" class="w-full h-full object-cover") 
-				.footer-right(class="w-[calc(100%-29.166666666666668rem-6.25rem)] flex rem:gap-[160px]")
-					.col-left(class="rem:w-[265px]")
+				.footer-right(class="xl:w-[calc(100%-29.166666666666668rem-6.25rem)] lg:w-[calc(100%-21.875rem-2.08333rem)] w-full flex flex-col md:flex-row xl:rem:gap-[160px] gap-base")
+					.col-left(class="lg:rem:w-[265px] w-full")
 						.footer-column 
 							h3 LIÊN KẾT NHANH
 							ul.footer-menu 
@@ -53,7 +54,7 @@ footer.footer(class="rem:pb-[25px] pt-17 bg-Primary-Red z-100  relative")
 									a(href="#") Giới thiệu 
 								li 
 									a(href="#") Giới thiệu 
-					.col-right(class="w-[calc(100%-13.802083333333334rem-8.333333333333334rem)]")
+					.col-right(class="lg:w-[calc(100%-13.802083333333334rem-8.333333333333334rem)] w-full")
 						.footer-column 
 							h3 HỖ TRỢ KHÁCH HÀNG
 							ul.footer-menu 
@@ -83,7 +84,7 @@ footer.footer(class="rem:pb-[25px] pt-17 bg-Primary-Red z-100  relative")
 								li 
 									a(href="#") 
 										i.fa-brands.fa-linkedin
-		.footer-copyright(class="py-6 border-t border-t-255 flex items-center justify-between") 
+		.footer-copyright(class="lg:py-6 py-4 pb-0 border-t border-t-255 flex items-center justify-between flex-col lg:flex-row") 
 			.left 
 				.desc(class="text-sm text-Neutral-White opacity-50 font-normal") 
 					p © 2025 VIETAUBEV. All Rights Reserved. Thiết kế web bởi Cánh Cam.

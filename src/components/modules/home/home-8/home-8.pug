@@ -1,9 +1,9 @@
-section.home-8(class="rem:h-[636px] relative")
+section.home-8(class="md:rem:h-[636px] h-full relative")
 	.home-4-bg(class="absolute top-[-0.5rem] left-2 rem:w-[225px] rem:h-[265px] z-40")
 		img(src="./img/bg-home-4.png", alt="" class="w-full h-full object-cover lozad")
-	.home-8-main(class="flex h-full")
-		.col-left(class="rem:w-[660px] h-full flex justify-end rounded-tr-2xl rounded-br-2xl bg-Primary-Red ")
-			.content(class="rem:w-[410px] rem:pr-[52px] h-full flex flex-col justify-center")
+	.home-8-main(class="flex flex-col lg:flex-row  h-full")
+		.col-left(class="xl:rem:w-[660px] lg:w-[40%] md:w-[50%] w-full h-full flex justify-end rounded-tr-2xl rounded-br-2xl bg-Primary-Red ")
+			.content(class="rem:w-[410px] md:rem:pr-[52px] p-5 h-full flex flex-col justify-center")
 				h2(class="title-36 !text-Neutral-White mb-base") Thương hiệu 
 				.desc(class="mb-base text-lg font-normal text-Neutral-White") 
 					p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -13,7 +13,7 @@ section.home-8(class="rem:h-[636px] relative")
 							span XEM THÊM
 							.icon 
 								i.fa-regular.fa-arrow-right-long
-		.col-right(class="h-full rem:w-[1260px] bg-Primary-Silver p-20 relative")
+		.col-right(class="h-full xl:rem:w-[1260px] lg:w-[60%] md:w-[50%] w-full bg-Primary-Silver xl:p-20 lg:p-10 p-5 relative")
 			.swiper.brand-swiper 
 				.swiper-wrapper 
 					.swiper-slide 
@@ -64,6 +64,33 @@ section.home-8(class="rem:h-[636px] relative")
 						.item(class="rem:w-[200px] rem:h-[200px] rounded-2xl shadow-Dropshadow-Light bg-Neutral-White") 
 							a(href="#" class="aspect-1 img-ratio")
 								img(src="./img/brand-1.png", alt="") 
-			.arrow-button(class="flex flex-col gap-3 absolute rem:right-[172px] top-2/4 -translate-y-2/4")
+					.swiper-slide 
+						.item(class="rem:w-[200px] rem:h-[200px] rounded-2xl shadow-Dropshadow-Light bg-Neutral-White") 
+							a(href="#" class="aspect-1 img-ratio")
+								img(src="./img/brand-1.png", alt="") 
+					.swiper-slide 
+						.item(class="rem:w-[200px] rem:h-[200px] rounded-2xl shadow-Dropshadow-Light bg-Neutral-White") 
+							a(href="#" class="aspect-1 img-ratio")
+								img(src="./img/brand-1.png", alt="") 
+					.swiper-slide 
+						.item(class="rem:w-[200px] rem:h-[200px] rounded-2xl shadow-Dropshadow-Light bg-Neutral-White") 
+							a(href="#" class="aspect-1 img-ratio")
+								img(src="./img/brand-1.png", alt="") 
+					.swiper-slide 
+						.item(class="rem:w-[200px] rem:h-[200px] rounded-2xl shadow-Dropshadow-Light bg-Neutral-White") 
+							a(href="#" class="aspect-1 img-ratio")
+								img(src="./img/brand-1.png", alt="") 
+					.swiper-slide 
+						.item(class="rem:w-[200px] rem:h-[200px] rounded-2xl shadow-Dropshadow-Light bg-Neutral-White") 
+							a(href="#" class="aspect-1 img-ratio")
+								img(src="./img/brand-1.png", alt="") 
+					.swiper-slide 
+						.item(class="rem:w-[200px] rem:h-[200px] rounded-2xl shadow-Dropshadow-Light bg-Neutral-White") 
+							a(href="#" class="aspect-1 img-ratio")
+								img(src="./img/brand-1.png", alt="") 
+			.arrow-button(class="xl:flex hidden flex-col gap-3 absolute rem:right-[172px] top-2/4 -translate-y-2/4")
 				.btn.btn-next.btn-sw-1
 				.btn.btn-prev.btn-sw-1
+			.arrow-button-mobile(class="flex items-center justify-center gap-3 xl:hidden mt-base")
+				.btn.btn-prev.btn-sw-1
+				.btn.btn-next.btn-sw-1

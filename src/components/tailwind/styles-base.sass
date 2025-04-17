@@ -25,6 +25,14 @@
 	.img-full
 		img
 			@apply w-full h-full object-cover
+	.ratio-contain
+		position: relative
+		display: block
+		height: 0
+		overflow: hidden
+		padding-top: 100%
+		img,iframe
+			@apply absolute top-0 left-0 w-full h-full object-contain transition-all duration-300
 	.img-ratio
 		position: relative
 		display: block

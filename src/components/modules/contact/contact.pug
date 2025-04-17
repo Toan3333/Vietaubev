@@ -1,0 +1,59 @@
+section.global-breadcrumb
+	.container
+		nav(aria-label="breadcrumbs", class="rank-math-breadcrumb")
+			p
+				a(href="https://oracle.webcanhcam.vn") Trang chủ
+				span(class="separator")  | 
+				span(class="last") Về chúng tôi 
+section.contact(class="section-py")
+	.container 
+		.title(class="text-6xl center text-Primary-Red text-center ") Liên hệ
+		.contact-list(class="wrap grid grid-cols-2 gap-[15px] lg:grid-cols-4 md:gap-[20px] lg:gap-10 mt-10")
+			.item(class="bg-neutral-50 p-6 flex flex-col items-center gap-2")
+				.icon(class="w-10 h-10 bg-Primary-Red text-Neutral-White flex items-center justify-center rounded-lg")
+					i.fa-light.fa-location-dot
+				h4(class="rem:text-[16px] font-bold") Địa chỉ
+				.desc(class="text-center")
+					a(href="#") T15 - 40, Manhattan Glory, Vinhomes Grand Park, Phường Long Bình, Thành phố Thủ Đức
+			.item(class="bg-neutral-50 p-6 flex flex-col items-center gap-2")
+				.icon(class="w-10 h-10 bg-Primary-Red text-Neutral-White flex items-center justify-center rounded-lg")
+					i.fa-light.fa-phone
+				h4(class="rem:text-[16px] font-bold") Điện thoại
+				.desc(class="text-center")
+					a(href="#") 091 898 33 00
+			.item(class="bg-neutral-50 p-6 flex flex-col items-center gap-2")
+				.icon(class="w-10 h-10 bg-Primary-Red text-Neutral-White flex items-center justify-center rounded-lg")
+					i.fa-solid.fa-envelope
+				h4(class="rem:text-[16px] font-bold") Email
+				.desc(class="text-center")
+					a(href="#") VietAu@gmail.com
+			.item(class="bg-neutral-50 p-6 flex flex-col items-center gap-2")
+				.icon(class="w-10 h-10 bg-Primary-Red text-Neutral-White flex items-center justify-center rounded-lg")
+					i.fa-regular.fa-globe
+				h4(class="rem:text-[16px] font-bold") Website
+				.desc(class="text-center")
+					a(href="#") www.VietAu.vn
+		.wrap-form(class="grid lg:grid-cols-2 gap-[15px] md:gap-[20px] lg:gap-10 mt-10")
+			.iframe-map(class="img-ratio pt-[50%] md:pt-[30%] lg:pt-[90%] xl:ratio:pt-[580_680] [&__iframe]:object-contain rounded-xl overflow-hidden")
+				iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.179083376975!2d106.73145907596964!3d10.797592189352487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175260548ef17b7%3A0x8a4d6e4cd35d1c51!2zNDQgU-G7kSAxLCBQaMaw4budbmcgQW4gS2jDoW5oLCBUaOG7pyDEkOG7qWMsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1744826242758!5m2!1svi!2s", width="600", height="450", style="border:0;", allowfullscreen, loading="lazy", referrerpolicy="no-referrer-when-downgrade")
+			.content-form(class="bg-neutral-50 rounded-lg md:p-5 p-[15px] lg:p-10")
+				.text(class="text-center mb-5") Mọi sự hợp tác tốt đẹp đều bắt đầu từ một cuộc trò chuyện. Hãy liên hệ với chúng tôi, mọi mong muốn của bạn sẽ được lắng nghe.
+				.wrap-form(class="flex flex-col gap-5")
+					.form-group.form-primary
+						input(type="text" placeholder="Họ và tên*")
+					.form-group.form-primary
+						input(type="text" placeholder="Họ và tên*")
+					.form-group.form-primary
+						input(type="text" placeholder="Họ và tên*")
+					.form-group.form-primary
+						input(type="text" placeholder="Họ và tên*")
+					.form-group.form-primary
+						textarea#your-message(name="your-message", placeholder="Nội dung")
+					//- Thêm reCAPCHA
+					.form-group.form-primary
+					.btn-submit(class="flex-center")
+						.button-primary(class="flex items-center gap-2")
+							span Gửi
+							.icon 
+								i.fa-regular.fa-arrow-right-long
+

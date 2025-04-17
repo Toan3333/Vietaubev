@@ -1,7 +1,7 @@
 .home-3
 	@apply relative overflow-hidden
 	.home-3-nav
-		@apply flex items-center gap-3
+		@apply flex items-center gap-3 whitespace-nowrap
 		li
 			@apply rounded-1 rem:py-[10px] px-5 bg-transparent border border-Primary-Red text-Primary-Red
 			&:hover
@@ -25,11 +25,12 @@
 			.swiper-scrollbar::-webkit-scrollbar-track 
 				background: #f0f0f0
 				border-radius: 10px
-
-
-			.swiper-scrollbar::-webkit-scrollbar-thumb 
-				background-color: #007bff
-				border-radius: 10px
-			.swiper-scrollbar::-webkit-scrollbar-thumb:hover 
-				background-color: #0056b3
+@media (max-width: 1023.98px)
+	.home-3
+		.home-3-top
+			@apply flex-col
+			h2
+				@apply mb-base
+		.home-3-nav
+			@apply overflow-x-auto w-full
 	

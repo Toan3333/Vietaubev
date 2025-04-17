@@ -1,0 +1,9 @@
+.contact
+	.title
+		@apply relative
+		&::before
+			content: ''
+			@apply absolute rem:w-[60px] rem:h-[4px] bg-Primary-Red top-full
+		&.center
+			&::before
+				@apply left-1/2 -translate-x-1/2

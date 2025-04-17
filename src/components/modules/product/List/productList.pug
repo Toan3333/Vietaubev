@@ -23,7 +23,7 @@ section.product(class="section-py relative ")
 								option(value="12") 48 
 							.icon(class="absolute right-6 top-2/4 -translate-y-2/4 cursor-pointer pointer-events-none text-Primary-1") 
 								i.fa-regular.fa-chevron-down
-	.product-wrap(class="flex gap-base rem:px-[260px]")
+	.product-wrap(class="flex gap-base xl:rem:px-[260px] lg:px-10 px-5")
 		.col-left(class="w-3/12 ")
 			.product-category(class="flex items-center  gap-3 w-full")
 				.product-item(class="cursor-pointer w-full") 
@@ -41,8 +41,8 @@ section.product(class="section-py relative ")
 									span.product-display-value Beige
 								.product-color 
 									span
-		.col-right(class="w-9/12")
-			.col-right-product-list(class="grid grid-cols-3 gap-base")
+		.col-right(class="w-9/12 ")
+			.col-right-product-list(class="grid lg:grid-cols-3 md:grid-cols-2 gap-base mt-base lg:mt-0")
 				-for(var i = 0; i <= 15; i++)
 					+ProductItem()
 			.pagination(class="mt-base")

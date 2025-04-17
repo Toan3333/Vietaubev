@@ -1,12 +1,18 @@
 
-	
-
 .footer
-	// background-image: url('../img/bg-footer1.png') /* Đường dẫn đến hình ảnh của bạn */
-	// background-position: center /* Căn giữa hình ảnh */
-	// background-attachment: fixed /* Hình nền sẽ không cuộn khi bạn cuộn trang */
-	// background-repeat: no-repeat /* Không lặp lại hình ảnh */
-	// background-size: cover /* Đảm bảo hình ảnh phủ toàn bộ phần tử */
+	position: fixed
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	background-size: cover
+	color: #ebd7ba
+	text-transform: uppercase
+	line-height: 1.23
+	z-index: 1
+	padding: 2rem 1.5rem
+	transition: opacity 0.5s ease-in-out
+
 	.social-fixed
 		@apply pointer-events-auto
 		ul
@@ -70,9 +76,9 @@
 	h3
 		@apply text-lg font-bold text-Neutral-White mb-6
 	.form-footer
-		@apply w-[960px] mx-auto flex items-center rem:gap-[10px] rem:h-[49px] rem:mt-[21px]
+		@apply xl:w-[960px] w-full justify-center mx-auto flex items-center rem:gap-[10px] rem:h-[49px] rem:mt-[21px]
 		.form-field
-			@apply rem:w-[790px] h-full flex-shrink-0 relative
+			@apply lg:rem:w-[790px] md:rem:w-[500px] w-full h-full  relative
 			input
 				@apply w-full bg-transparent h-full rem:pb-[15px] border-b border-b-Neutral-White opacity-50
 		.btn-submit 
@@ -107,3 +113,7 @@
 				&:last-child
 					&::before
 						content: unset
+@media (max-width: 767.98px)
+	.footer
+		.footer-bg
+			@apply w-full

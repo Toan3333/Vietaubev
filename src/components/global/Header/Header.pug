@@ -1,15 +1,20 @@
 header.header
+	form.search-bar-container(action="", class="")
+		.searchbox(class="w-full relative cursor-pointer") 
+			input#search-btn(type="text", class="searchinput", placeholder="Tìm kiếm...", class="px-4 py-2 rounded bg-Neutral-White shadow-lg w-full cursor-pointer")
+			.search-icon(class="absolute top-2/4 -translate-y-2/4 right-0 pr-5 text-Primary-Primary_01")
+				i.fa-sharp.fa-regular.fa-magnifying-glass
 	.container 
-		.header-top(class="flex items-center justify-between rem:mb-[13px]") 
+		.header-top(class="xl:flex items-center justify-between rem:mb-[13px] hidden") 
 			.header-logo(class="rem:w-[146px] rem:h-[67px]") 
 				a(href="#" class="w-full h-full block")
 					img(src="./img/logo.svg", alt="" class="w-full h-full object-cover lozad") 
-			.header-search
+			.header-search(class="hidden xl:block")
 				.search(class="relative rem:w-[416px]")
 					input(type="text" placeholder="Tìm kiếm")
 				.header-search-icon
 					i.fa-solid.fa-magnifying-glass
-			.header-top-right(class="flex items-center gap-5")
+			.header-top-right(class="lg:flex items-center gap-5 hidden")
 				a.btn-cart(href="#")  
 					.icon(class="text-xl") 
 						i.fa-regular.fa-cart-flatbed-boxes
@@ -18,7 +23,7 @@ header.header
 					.icon(class="text-xl") 
 						i.fa-regular.fa-right-to-bracket
 					span Đăng nhập / Đăng ký
-		.header-bottom(class=" border-t border-t-Neutral-100 h-12")
+		.header-bottom(class=" border-t border-t-Neutral-100 h-12 xl:block hidden")
 			.header-menu(class="flex items-center justify-between h-full")
 				ul.header-nav 
 					li 
@@ -26,19 +31,263 @@ header.header
 							i.fa-solid.fa-house
 					li 
 						a(href="./about.html") GIỚI THIỆU 
-					li 
+					li(class="group menu-item-has-children") 
 						a(href="./service.html") RƯỢU MẠNH
 							.icon 
 								i.fa-regular.fa-chevron-down
-					li 
-						a(href="./productList.html") RƯỢU VANG
-					li 
+						ul.sub-menu
+							.mega-dropdown-wrapper(class="")
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-wine-bottle
+										.title(class="text-lg font-bold text-Primary-Red") LOẠI RƯỢU
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-award
+										.title(class="text-lg font-bold text-Primary-Red") THƯƠNG HIỆU
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-earth-americas
+										.title(class="text-lg font-bold text-Primary-Red") QUỐC GIA
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-wine-glass
+										.title(class="text-lg font-bold text-Primary-Red") RƯỢU MINI
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+					li(class="group menu-item-has-children") 
+						a(href="./service.html") RƯỢU VANG
+							.icon 
+								i.fa-regular.fa-chevron-down
+						ul.sub-menu
+							.mega-dropdown-wrapper(class="")
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-wine-bottle
+										.title(class="text-lg font-bold text-Primary-Red") LOẠI RƯỢU
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-wine-bottle
+										.title(class="text-lg font-bold text-Primary-Red") LOẠI RƯỢU
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-wine-bottle
+										.title(class="text-lg font-bold text-Primary-Red") LOẠI RƯỢU
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-wine-bottle
+										.title(class="text-lg font-bold text-Primary-Red") LOẠI RƯỢU
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+					li#hopqua.menu-item-has-children
 						a(href="./newList.html") RƯỢU SAKE - MƠ
-					li 
-						a(href="./productList.html") HỘP QUÀ
+						ul.sub-menu 
+							li 
+								a(href="#") NISHINOSEKI
+							li 
+								a(href="#") NISHINOSEKI
+							li 
+								a(href="#") NISHINOSEKI
+							li 
+								a(href="#") NISHINOSEKI
+							li 
+								a(href="#") NISHINOSEKI
+					li(class="group menu-item-has-children") 
+						a(href="./service.html") HỘP QUÀ
+							.icon 
+								i.fa-regular.fa-chevron-down
+						ul.sub-menu
+							.mega-dropdown-wrapper(class="")
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-wine-bottle
+										.title(class="text-lg font-bold text-Primary-Red") LOẠI RƯỢU
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-wine-bottle
+										.title(class="text-lg font-bold text-Primary-Red") LOẠI RƯỢU
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-wine-bottle
+										.title(class="text-lg font-bold text-Primary-Red") LOẠI RƯỢU
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+								.mega-dropdown-column
+									.title-heading(class="flex items-center gap-3 mb-3 text-Primary-Red") 
+										.icon(class="rem:w-[26px] rem:h-[26px] flex-shrink-0") 
+											i.fa-solid.fa-wine-bottle
+										.title(class="text-lg font-bold text-Primary-Red") LOẠI RƯỢU
+									ul.mega-dropdown
+										li(class="group relative children") 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
+										li 
+											a(href="#") Waxing
 					li 
 						a(href="./productList.html") SẢN PHẨM KHÁC
 					li 
-						a(href="./productList.html") TIN TỨC
+						a(href="./newsList.html") TIN TỨC
 					li 
-						a(href="./productList.html") LIÊN HỆ
+						a(href="./contact.html") LIÊN HỆ
+		.header-mobile(class="xl:hidden block") 
+			.header-main-mobile(class="flex items-center justify-between")
+				.header-right-mobile(class="flex xl:hidden items-center gap-2")
+					.header-bar-mobile
+						.header-bar 
+							i.fa-solid.fa-bars
+				.header-mobile-logo(class="lg:rem:w-[232px] w-[10rem] rem:h-[72px]") 
+					a(href="#" class="w-full h-full block lozad")
+						img(src="./img/logo.svg", alt="" class="w-full h-full object-contain") 
+				.header-cart-mobile(class="text-28 text-Primary-Red flex items-center gap-3")
+					.header-search-mobile
+						.header-search-mobile-icon
+							i.fa-regular.fa-magnifying-glass 
+					.icon 
+						i.fa-light.fa-cart-plus
+	.header-nav-mobile(class="block lg:hidden")
+		ul(class="flex items-center text-white")
+			li
+				a(href="./home.html") Trang chủ
+			li
+				a(href="./about.html") Giới thiệu
+			li(class="menu-item-has-children")
+				a(href="./productList.html") Rượu mạnh
+				ul.sub-menu 
+					li.menu-item-has-children
+						a.title-children(href="#") LOẠI RƯỢU
+						ul.sub-menu-children 
+							li 
+								a(href="#") Cognac
+							li 
+								a(href="#") Cognac
+							li 
+								a(href="#") Cognac
+							li 
+								a(href="#") Cognac
+							li 
+								a(href="#") Cognac
+					li 
+						a(href="#") THƯƠNG HIỆU
+					li 
+						a(href="#") QUỐC GIA
+					li 
+						a(href="#") RƯỢU MINI
+						
+			li
+				a(href="./productList.html") Rượu vang
+			li(class="menu-item-has-children")
+				a(href="#") Rượu sake
+				ul.sub-menu 
+					li 
+						a(href="#") NISHINOSEKI
+					li 
+						a(href="#") NISHINOSEKI
+					li 
+						a(href="#") NISHINOSEKI
+					li 
+						a(href="#") NISHINOSEKI
+					li 
+						a(href="#") NISHINOSEKI
+			li
+				a(href="./productList.html") Hộp quà
+			li
+				a(href="./productList.html") Sản phẩm khác
+			li
+				a(href="./newsList.html") Tin tức
+			li
+				a(href="./contact.html") LIÊN HỆ

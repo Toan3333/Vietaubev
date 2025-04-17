@@ -1,6 +1,6 @@
 .header
 	box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.05)
-	@apply pt-3 bg-Neutral-White sticky left-0 right-0 z-100 top-0
+	@apply pt-3 bg-Neutral-White sticky left-0 right-0 z-[200] top-0
 	.header-search
 
 		@apply flex items-center rem:h-[44px] gap-1
@@ -25,32 +25,79 @@
 			&:hover
 				@apply bg-Primary-Red text-Neutral-White
 	.header-bottom
-		
-		.header-nav
+		ul.header-nav
 			@apply flex justify-between w-full h-full
-			li
+			// id của hộp quà wordpress gắn lên sau
+			#hopqua
 				@apply relative
+				ul.sub-menu
+					@apply top-[2.5rem] p-5 rem:w-[251px]
+					li
+						a
+							&::before
+								content: none
+			li
 				a
-					@apply font-semibold text-Primary-Dark-Gray border-b-2 border-transparent relative uppercase h-full flex items-center gap-2 rem:text-[16px]
+					@apply font-semibold text-Primary-Dark-Gray border-b-2 border-transparent relative uppercase h-full inline-flex items-center gap-2 rem:text-[16px]
 					&.active
 						@apply text-Primary-Red border-b-2 border-b-Primary-Red
 					&:hover
 						@apply text-Primary-Red border-b-2 border-b-Primary-Red
-				&:not(:last-child)::before
-					content: ""
-					position: absolute
-					right: -40px
-					top: 50%
-					transform: translateY(-50%)
-					width: 1px
-					height: 12px
-					@apply bg-[#B0B5BE]
+					&::before
+						content: ""
+						position: absolute
+						right: -40px
+						top: 50%
+						transform: translateY(-50%)
+						width: 1px
+						height: 12px
+						@apply bg-[#B0B5BE]
+				&:last-child
+					a
+						&::before
+							content: none
 		
 				&[class*='current']
 					&>a
 						@apply text-Primary-Red font-semibold border-b-2 border-b-Primary-Red #{!important}
+				&:hover
+					&.menu-item-has-children
+						ul.sub-menu
+							@apply opacity-100 pointer-events-auto visible
+				ul.sub-menu
+					@apply p-10 flex flex-col gap-4 opacity-0 invisible transition-300 z-10 absolute top-[7.30rem] left-0 w-full pointer-events-none overflow-hidden bg-Neutral-White shadow-Dropshadow-Light border-t border-t-Neutral-100 rem:px-[260px]
+					.mega-dropdown-wrapper
+						@apply grid grid-cols-4 h-full 
+						.mega-dropdown-column
+							@apply relative h-full
+							&::before
+								content: ""
+								height: calc(100% - -5rem)
+								@apply absolute top-[-3rem] left-0 w-[1px] bg-[#D9D9D9] 
+							&:first-of-type
+								&::before
+									content: none
+									
+							li
+								a
+									&::before
+										content: none
+							&:nth-child(2)
+								@apply pl-10
+							&:nth-child(3)
+								@apply pl-10
+							&:nth-child(4)
+								@apply pl-10
+								
+					ul.mega-dropdown
+						@apply flex gap-3 flex-col
+						li
+							a
+								@apply rem:text-[16px] font-normal text-Neutral-400
+				
 	.header-bar
-		@apply w-12 h-12 flex-shrink-0 inline-flex items-center justify-center text-Neutral-White bg-red-400 backdrop-blur-sm text-2xl
+		@apply w-12 h-12 flex-shrink-0 inline-flex items-center 
+		@apply justify-center text-Neutral-White bg-Primary-Red backdrop-blur-sm text-32
 	.search-bar-container
 		position: absolute
 		top: 100%
@@ -77,16 +124,23 @@
 		left: 0
 		visibility: visible
 		transition: left 0.5s ease-in-out, opacity 0.3s ease-in-out, visibility 0s
-	
-@media (max-width: 1023.98px)
+	.header-mobile
+		.header-mobile-logo
+			@apply absolute left-2/4 -translate-x-2/4
+
+@media (max-width: 1279.98px)
 	.header
-	
+		@apply pt-0 fixed
+		.header-main-mobile
+			@apply h-[80px] pt-0
 		.header-nav-mobile
 			position: absolute
+			transform: translateX(100%)
 			top: 100%
-			left: 0
+			right: 0
+			bottom: 0
 			box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05)
-			background-color: #dc7420
+			background-color: #ffffff
 			width: 100vw
 			height: calc(100dvh - var(--header-height))
 			z-index: 9999
@@ -96,19 +150,68 @@
 			align-items: stretch
 			opacity: 0 
 			visibility: hidden 
-			transform: translateY(30%)
+			transition: right 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.3s ease-in-out 
 			transition: all 0.4s ease
 			@apply duration-500 max-xl:w-full
 			&.open
 				opacity: 1
 				visibility: visible
-				transform: translateY(0)
+				transform: translatex(0)
 			ul
 				@apply flex flex-col items-stretch w-full
 				li
+					@apply py-4 px-[15px]
 					a
-						@apply text-Neutral-White py-4 px-[15px] border-b border-b-Neutral-White flex items-center text-[16px]
+						@apply text-Neutral-Black  border-b inline-flex items-center text-[16px] border-b-transparent
 				li
 					&[class*='current']
 						&>a
-							@apply text-Primary-Red
+							@apply text-Primary-Red border-b border-Primary-Red
+@media (max-width: 1023.98px)
+	.header
+		.header-main-mobile
+			@apply h-[80px] pt-0
+		.header-nav-mobile
+			position: absolute
+			transform: translateX(100%)
+			top: 100%
+			right: 0
+			bottom: 0
+			box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05)
+			background-color: #ffffff
+			width: 100vw
+			height: calc(100dvh - var(--header-height))
+			z-index: 9999
+			display: flex
+			flex-direction: column
+			gap: 10px
+			align-items: stretch
+			opacity: 0 
+			visibility: hidden 
+			transition: right 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.3s ease-in-out 
+			transition: all 0.4s ease
+			@apply duration-500 max-xl:w-full
+			&.open
+				opacity: 1
+				visibility: visible
+				transform: translatex(0)
+			ul
+				@apply flex flex-col items-stretch w-full
+				li
+					@apply py-4 px-[15px]
+					a
+						@apply text-black  border-b inline-flex items-center text-[16px] border-b-transparent
+					&[class*='current']
+						&>a
+							@apply text-Primary-Red border-b border-Primary-Red
+					&.menu-item-has-children
+						&>a
+							@apply relative flex items-center justify-between text-Primary-Red
+							&.dropdown-active
+								&::after
+									@apply rotate-180
+							&::after
+								content: '\f0d7'
+								@apply font-awesome font-black text-lg text-Primary-Red
+					ul.sub-menu
+						@apply bg-black/20

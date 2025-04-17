@@ -1,4 +1,6 @@
 .product-body
+	.banner
+		margin-top: calc(1 * var(--header-height))
 	.footer
 		@apply mt-0
 .product
@@ -58,12 +60,49 @@
 	.col-right
 		.product-item
 			.product-image
+				@apply w-full
 				a
 					img
 						transition: .2s all ease-in-out
 		.format-content
-			@apply flex flex-col gap-5 mt-20
+			@apply flex flex-col gap-5 xl:mt-20 mt-base
 			.image
 				@apply flex items-center justify-center
 			img
 				@apply rem:w-[800px] rem:h-[459px]
+@media (max-width: 1279.98px)
+	.product
+		.product-heading
+			@apply my-10
+		&::before
+			@apply top-[8.5rem]
+		&::after
+			left: calc(25% + 10px)
+@media (max-width: 1023.98px)
+	.product
+		
+		&::after
+			left: calc(25% + -12px)
+@media (max-width: 767.98px)
+	.product
+		.product-heading
+			.right
+				.select-view-item
+					@apply w-[6.8rem]
+		&::after
+			content: none
+		&::before
+			content: none
+		.product-wrap
+			@apply flex-col
+			.col-left
+				@apply w-full
+			.col-right
+				@apply w-full
+		.col-right
+			.format-content
+				@apply flex flex-col gap-5 xl:mt-20 mt-base
+				.image
+					@apply flex items-center justify-center
+				img
+					@apply w-full h-full object-cover

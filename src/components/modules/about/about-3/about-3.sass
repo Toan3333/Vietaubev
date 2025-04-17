@@ -1,0 +1,30 @@
+@media (max-width: 1279.98px)
+	.about-3
+		.about-3-main
+			@apply gap-[2.5rem] 
+			.col-right
+				.content
+					@apply w-[20.5rem]
+			&:last-child
+				.col-right
+					@apply  pl-20
+					.content
+						@apply pl-0 pb-5
+@media (max-width: 1023.98px)
+	.about-3-main
+		@apply flex-col gap-[1.5rem] #{!important}
+		.col-left
+			@apply w-full
+			.content
+				@apply w-full p-5 #{!important}
+		.col-right
+			@apply w-full
+			.content
+				@apply w-full p-5 #{!important} 
+		&:last-child
+			.col-right
+				@apply pl-0 #{!important}
+				.content
+					@apply  pl-0
+				
+				

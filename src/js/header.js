@@ -19,17 +19,27 @@ export const header = {
 			$(this).toggleClass("active");
 			$("body").toggleClass("isOpenMenu");
 		});
-		$('.header-nav-mobile li[class*="menu-item-has-children"] > a').on("click", function (e) {
+		// Ẩn hết các menu con lúc đầu
+		$(".menu-item-has-children > ul").hide();
+
+		// Click vào bất kỳ link nào có menu con
+		$(".menu-item-has-children > a").on("click", function (e) {
 			e.preventDefault();
-			$(this)
-				.toggleClass("dropdown-active")
-				.next()
-				.slideToggle()
-				.parent()
-				.siblings()
-				.find("a")
+
+			const $link = $(this);
+			const $submenu = $link.next("ul");
+
+			// Toggle chính nó
+			$link.toggleClass("dropdown-active");
+			$submenu.slideToggle();
+
+			// Ẩn các menu cùng cấp khác (chỉ trong cùng ul cha)
+			$link
+				.parent() // li
+				.siblings(".menu-item-has-children")
+				.find("> a.dropdown-active")
 				.removeClass("dropdown-active")
-				.next()
+				.next("ul")
 				.slideUp();
 		});
 	},
@@ -39,6 +49,19 @@ export const header = {
 			const height = $header.outerHeight(); // outerHeight có padding & border
 			console.log("Header height:", height); // Debug cho chắc
 			document.documentElement.style.setProperty("--header-height", `${height}px`);
+		}
+
+		const $footer = $("footer.footer"); // Chắc chắn đúng selector
+
+		if ($footer.length) {
+			const height = $footer.outerHeight(); // Lấy full height (có padding)
+			console.log("Footer height:", height); // Debug kiểm tra
+
+			// Cách 1: Dùng padding trực tiếp vào body
+			document.body.style.paddingBottom = `${height}px`;
+
+			// Cách 2 (nếu bạn xài biến CSS cho dynamic layout)
+			document.documentElement.style.setProperty("--footer-height", `${height}px`);
 		}
 	},
 	init: function () {

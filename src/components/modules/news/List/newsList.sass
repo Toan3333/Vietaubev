@@ -1,6 +1,5 @@
-.home-10
-	@apply relative overflow-hidden
-	.home-10-nav
+.news
+	ul.news-nav
 		@apply flex items-center gap-3
 		li
 			@apply rounded-1 rem:py-[10px] px-5 bg-transparent border border-Primary-Red text-Primary-Red
@@ -8,11 +7,6 @@
 				@apply border-transparent bg-Primary-Red  text-Neutral-White
 			&.active
 				@apply bg-Primary-Red  border-transparent text-Neutral-White
-@media (max-width: 767.98px)
-	.home-10
-		@apply relative 
-		.home-10-nav
-			@apply overflow-x-auto  whitespace-nowrap w-full
-		.home-10-top
-			h2
-				@apply mb-base
+.category
+	.banner
+		margin-top: calc(1 * var(--header-height))

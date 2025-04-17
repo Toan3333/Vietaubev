@@ -1,0 +1,53 @@
++Banner()
+section.news(class="section-py")
+	.container 
+		.heading(class="flex flex-col md:flex-row items-center justify-between mb-base") 
+			.left 
+				h2(class="title-36") Tin visante
+			.right 
+				ul.news-nav
+					li 
+						a(href="#") Tin visante
+					li 
+						a(href="#") Tin visante
+		.news-main(class="flex flex-col lg:flex-row gap-base")
+			.col-left(class="lg:w-9/12 w-full")
+				.col-left-main(class="flex flex-col-reverse lg:flex-row")
+					.content(class="lg:rem:w-[351px] w-full bg-Primary-Silver p-10 flex flex-col gap-3")
+						date(class="text-xs text-Neutral-300") 14/04/2025
+						h2(class="text-2xl font-medium hover:text-Primary-Red") 
+							a(href="#") Làm sao để da không bị mụn? Bí quyết giữ da luôn khỏe đẹp 
+						.desc(class="text-sm text-neutral-500 line-clamp-3") Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium numquam culpa repudiandae officia quisquam fugiat, distinctio consequatur soluta vero illo odit facilis natus enim minus atque voluptatibus aliquid quidem nostrum!
+					.image(class="lg:w-[calc(100%-18.28125rem)] w-full")
+						a(href="./newsDetail.html" class="lozad img-ratio ratio:pt-[410_680] zoom-img")
+							img(src="./img/1.jpg", alt="") 
+			.col-right(class="lg:w-3/12 w-full")
+				.item-news(class="group")
+					.image(class="mb-6") 
+						a(href="#" class="img-ratio ratio:pt-[212_320] lozad zoom-img rounded-lg")
+							img(src="./img/1.jpg", alt="") 
+					.content(class="flex flex-col gap-3")
+						date(class=" text-Neutral-300") 14/04/2025
+						h2(class="text-lg line-clamp-2 font-medium group-hover:text-Primary-Red transition-all") 
+							a(href="#") Làm sao để da không bị mụn? Bí quyết giữ da luôn khỏe đẹp 
+						.desc(class="text-sm text-neutral-500 line-clamp-3") Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium numquam culpa repudiandae officia quisquam fugiat, distinctio consequatur soluta vero illo odit facilis natus enim minus atque voluptatibus aliquid quidem nostrum!
+		.news-list(class="grid lg:grid-cols-4 grid-cols-2 gap-base mt-base")
+			-for(var i = 0; i < 8; i++)
+				.item-news(class="group")
+					.image(class="mb-6") 
+						a(href="#" class="img-ratio ratio:pt-[212_320] lozad zoom-img rounded-lg")
+							img(src="./img/1.jpg", alt="") 
+					.content(class="flex flex-col gap-3")
+						date(class="text-xs text-Neutral-300") 14/04/2025
+						h2(class="text-lg line-clamp-2 font-medium group-hover:text-Primary-Red transition-all") 
+							a(href="#") Làm sao để da không bị mụn? Bí quyết giữ da luôn khỏe đẹp 
+						.desc(class="text-sm text-neutral-500 line-clamp-3") Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium numquam culpa repudiandae officia quisquam fugiat, distinctio consequatur soluta vero illo odit facilis natus enim minus atque voluptatibus aliquid quidem nostrum!
+		.pagination-news(class="flex-center mt-base")
+			ul.page-numbers
+				li 
+					a.active(href="#") 1 
+				li 
+					a(href="#") 2
+				li 
+					a(href="#") 3
+

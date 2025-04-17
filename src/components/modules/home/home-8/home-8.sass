@@ -1,4 +1,14 @@
 .home-8
 	.col-right
 		.swiper
-			@apply rem:w-[920px] ml-0 mr-0
+			@apply xl:rem:w-[920px] ml-0 mr-0 w-full
+@media (max-width: 1023.98px)
+	.home-8
+		.col-right
+			@apply flex flex-col items-center justify-center
+@media (max-width: 767.98px)
+	.home-8
+		.col-left
+			@apply w-full
+		.col-right
+			@apply w-full

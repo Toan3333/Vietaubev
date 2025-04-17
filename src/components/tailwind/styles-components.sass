@@ -3,7 +3,7 @@
 		.footer
 			@apply mt-[-17rem]
 	.btn-add-cart
-		@apply bg-Primary-Red text-Neutral-White h-full rem:py-[10px] px-5 w-full inline-flex items-center justify-center rounded-1 text-sm font-semibold rem:gap-[10px]
+		@apply bg-Primary-Red text-Neutral-White h-full rem:py-[10px] px-5 w-full inline-flex items-center justify-center rounded-1 text-sm font-semibold rem:gap-[10px] whitespace-nowrap
 		i
 			@apply rem:text-[16px]
 	.item-comp
@@ -55,7 +55,7 @@
 
 	.product-item
 		.product-image
-			@apply rounded-2xl border border-Neutral-100 overflow-hidden rem:w-[320px] rem:h-[360px]
+			@apply rounded-2xl border border-Neutral-100 overflow-hidden xl:rem:w-[320px] xl:rem:h-[360px] lg:w-full  w-full
 		.product-content
 			@apply mt-4 flex flex-col items-center justify-center text-center relative
 			.top h3
@@ -75,6 +75,7 @@
 			.product-content
 				.top h3
 					@apply text-Primary-Red
+	
 	.page-numbers
 		@apply flex-center gap-3
 		li
@@ -102,6 +103,13 @@
 		.hand
 			animation: moveSwipeGesture 2.25s infinite ease-in-out
 			@apply md:w-12 md:h-12 w-10 h-10
+	.form-primary,.form-row
+		input:not([type="checkbox"]),textarea,select
+			@apply w-full h-11 px-5 border-[#ddd] border rounded-lg outline-none transition-all
+			&:focus, &:hover
+				@apply border-Primary-Red
+		textarea
+			@apply py-2 h-25
 	@keyframes moveSwipeGesture
 		0%
 			transform: translateX(-8px)
@@ -109,3 +117,4 @@
 			transform: translateX(8px)
 		100%
 			transform: translateX(-8px)
+	

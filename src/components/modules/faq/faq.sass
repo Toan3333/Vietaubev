@@ -1,0 +1,25 @@
+.faq
+	.list-navigation
+		li
+			&.active
+				a
+					@apply text-Primary-Red
+					img
+						@apply grayscale-0
+			&:last-child
+				a
+					@apply border-b-0
+			a
+				img
+					@apply grayscale
+				&:hover
+					@apply text-Primary-Red
+					img
+						@apply grayscale-0
+	.col-right
+		.title-line
+			@apply relative
+			&::before
+				content: ''
+				@apply absolute rem:w-[60px] rem:h-[4px] bg-Primary-Red top-full
+			

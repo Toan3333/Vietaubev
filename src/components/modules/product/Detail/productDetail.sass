@@ -1,24 +1,23 @@
-.product-detail
-	// .col-left
-	// 	.swiper
-	// 		.item
-	// 			@apply 
 
+.product-detail				
 	.product-detail-image
 		.swiper
+			@apply h-full
+			
 			.swiper-slide
 				@apply w-full #{!important}
 	.col-left
 		.product-detail-gallary
-			@apply  flex-shrink-0
+			@apply rem:h-[593px] flex-shrink-0
 			.wrapper
 				@apply h-full rem:py-[50px]
 				.swiper
 					@apply w-full h-full py-2
 
 					.swiper-slide
+				
 						img
-							@apply border border-Neutral-100 rounded-lg  transition-all duration-300
+							@apply border border-transparent rounded-lg  transition-all duration-300
 						&.swiper-slide-thumb-active
 							img
 								@apply border border-Primary-Red
@@ -37,21 +36,16 @@
 						&::before
 							content: '\f078'
 							@apply text-Primary-Red
+
+					
 	.col-right
 		.product-detail-heading
-			@apply rem:mb-[18px]
-		.product-detail-weight
 			@apply mb-base
-			span
-				@apply rounded-1 rem:py-[6px] px-4 border border-Primary-Red text-lg font-semibold text-Primary-Red cursor-pointer
-				&.active
-					@apply bg-Primary-Red text-Neutral-White
-		.product-detail-social 
-			@apply mt-base flex items-center rem:gap-[10px]
-			a
-				@apply w-10 h-10 rounded-[2px] bg-Neutral-White inline-flex items-center justify-center text-Primary-Red
-				&:hover
-					@apply bg-Primary-Red text-Neutral-White
+			h3
+				@apply relative text-32 font-normal text-Primary-Red
+				&::before
+					content: ''
+					@apply absolute rem:bottom-[-8px] w-16 h-[2px] bg-Primary-Red
 		.product-detail-body
 			@apply rem:mb-[30px]
 			.column
@@ -67,19 +61,22 @@
 		.product-detail-info
 			@apply flex flex-col gap-5
 			span
+				@apply cursor-pointer
 				&.active
-					@apply bg-Primary-Red text-Neutral-White
-		.product-detail-share
-			.social
-				@apply flex items-center gap-2
-				a
-					@apply w-10 h-10 inline-flex items-center justify-center rounded-1 bg-Neutral-50
-					i
-						letter-spacing: 0.32px
-						@apply font-normal text-Primary-Red
-			.button-zalo 
-				a
-					@apply w-full inline-flex items-center justify-center rem:py-[10px] px-5 rounded-1 bg-[#3888FC] text-sm text-Neutral-White font-semibold rem:gap-[10px]
+					@apply bg-Primary-Red text-Neutral-White cursor-pointer
+				&:hover
+					@apply bg-Primary-Red text-Neutral-White transition-all
+			.product-detail-share
+				.social
+					@apply flex items-center gap-2
+					a
+						@apply w-10 h-10 inline-flex items-center justify-center rounded-1 bg-Neutral-50
+						i
+							letter-spacing: 0.32px
+							@apply font-normal text-Primary-Red
+				.button-zalo 
+					a
+						@apply w-full inline-flex items-center justify-center rem:py-[10px] px-5 rounded-1 bg-[#3888FC] text-sm text-Neutral-White font-semibold rem:gap-[10px]
 .product-detail-2
 	.swiper
 		.item
@@ -92,3 +89,94 @@
 						@apply absolute left-0 -bottom-3 w-15 h-[3px] bg-Primary-Red
 				.desc
 					@apply mt-5
+.product-detail-4
+	.swiper
+		overflow: unset !important
+		.product-detail-4-scroll
+			@apply inline-flex
+			.swiper-scrollbar 
+				@apply w-full h-[4px] rounded-lg bg-Neutral-100
+			/* Tùy chỉnh phần tay cầm của thanh cuộn */
+			.swiper-scrollbar .swiper-scrollbar-drag 
+				@apply bg-Primary-Red rem:w-[600px] h-[4px] rounded-none #{!important}
+			.swiper-scrollbar:hover .swiper-scrollbar-drag 
+				@apply bg-Primary-Red
+			.swiper-scrollbar::-webkit-scrollbar 
+				width: 10px 
+				height: 8px 
+			.swiper-scrollbar::-webkit-scrollbar-track 
+				background: #f0f0f0
+				border-radius: 10px
+.product-detail-5
+	.swiper
+		overflow: unset !important
+		.product-detail-5-scroll
+			@apply inline-flex
+			.swiper-scrollbar 
+				@apply w-full h-[4px] rounded-lg bg-Neutral-100
+			/* Tùy chỉnh phần tay cầm của thanh cuộn */
+			.swiper-scrollbar .swiper-scrollbar-drag 
+				@apply bg-Primary-Red rem:w-[600px] h-[4px] rounded-none #{!important}
+			.swiper-scrollbar:hover .swiper-scrollbar-drag 
+				@apply bg-Primary-Red
+			.swiper-scrollbar::-webkit-scrollbar 
+				width: 10px 
+				height: 8px 
+			.swiper-scrollbar::-webkit-scrollbar-track 
+				background: #f0f0f0
+				border-radius: 10px
+@media (max-width: 1279.98px)
+	.global-breadcrumb
+		margin-top: calc(1 * var(--header-height))
+	.product-detail-2
+		.swiper
+			.item
+				@apply w-full
+	.product-detail-4
+		.swiper
+			overflow: hidden !important
+
+	.product-detail-5
+		.swiper
+			overflow: hidden !important
+@media (max-width: 1023.98px)
+
+	.product-detail
+		.product-detail-main 
+			@apply flex
+			.col-left
+				.product-detail-gallary 
+					@apply h-auto
+					// .wrapper
+					// 	.swiper-slide
+					// 		@apply h-full #{!important}
+					.item
+						@apply w-full h-full
+				.product-detail-image
+					.product-box
+						@apply w-full flex items-center justify-center py-5 
+						.image
+							@apply relative left-0 top-0 -translate-y-0 -translate-x-0
+@media (max-width: 767.98px)
+	.product-detail
+		.product-detail-main 
+			.col-left
+				.wrapper
+					@apply relative py-0
+				.product-detail-gallary 
+					.item
+						@apply h-full
+					.arrow-button
+						@apply hidden
+		
+	.product-detail-4
+		.swiper
+			.product-detail-4-scroll
+				.swiper-scrollbar .swiper-scrollbar-drag 
+					@apply bg-Primary-Red rem:w-[200px] h-[4px] rounded-none #{!important}
+	.product-detail-5
+		.swiper
+			.product-detail-5-scroll
+				.swiper-scrollbar .swiper-scrollbar-drag 
+					@apply bg-Primary-Red rem:w-[200px] h-[4px] rounded-none #{!important}
+	
