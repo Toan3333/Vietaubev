@@ -20,13 +20,40 @@ $(document).ready(function () {
 	// countUpInit();
 	indicatorSlide();
 	toggleCheckbox();
-	console.log("ok");
+	applyParallax();
+
+	setTimeout(() => {
+		console.log("init AOS");
+		AOS.init({
+			offset: 200,
+			once: true,
+		});
+	}, 200);
+	setTimeout(() => {
+		console.log("refresh AOS");
+		AOS.refresh();
+	}, 1000);
 
 	$(".product-item-heading").on("click", function () {
 		$(this).next(".product-main").slideToggle();
 		$(this).find(".icon-left i").toggleClass("fa-chevron-down fa-chevron-up");
 	});
 });
+
+function applyParallax() {
+	const elements = document.querySelectorAll(".parallax-img");
+
+	window.addEventListener("scroll", () => {
+		const scrollY = window.scrollY;
+		elements.forEach((el) => {
+			const speed = 0.05; // Độ mạnh của parallax
+			const offset = el.getBoundingClientRect().top + window.scrollY;
+			const yPos = (scrollY - offset) * speed;
+
+			el.style.transform = `translateY(${yPos}px)`;
+		});
+	});
+}
 
 export function indicatorSlide() {
 	if ($(".indicator-swipe").length > 0) {
@@ -74,9 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*==================== Aos Init ====================*/
-AOS.init({
-	offset: 100,
-});
+
 /*==================== Lazyload JS ====================*/
 const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 observer.observe();

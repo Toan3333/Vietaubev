@@ -74,12 +74,12 @@ mixin ProductItem()
 				.price(class="group-hover:hidden flex items-center justify-center gap-5")
 					.price-sale 4.400.000 ₫
 					.price-old 5.400.000 ₫
-				.button-add-cart(class="absolute inset-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible flex items-center justify-center transition-all duration-500 ease-linear w-full") 
+				.button-add-cart(class="absolute inset-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible flex items-center justify-center transition-all duration-200 ease-linear w-full") 
 					a(href="#" class="inline-flex justify-center rem:py-[10px] px-5 rounded-1 text-white items-center w-full bg-Primary-Red rem:gap-[10px]")
 						span THÊM VÀO GIỎ HÀNG
 						.icon 
 							i.fa-regular.fa-cart-flatbed-boxes
 mixin Banner()
-	.banner 
+	.banner(class="relative z-50") 
 		a(href="#" class="img-ratio ratio:pt-[600_1920]")
 			img(src="./img/1.jpg", alt="") 

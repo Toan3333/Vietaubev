@@ -19,11 +19,8 @@ export const header = {
 			$(this).toggleClass("active");
 			$("body").toggleClass("isOpenMenu");
 		});
-		// Ẩn hết các menu con lúc đầu
-		$(".menu-item-has-children > ul").hide();
 
-		// Click vào bất kỳ link nào có menu con
-		$(".menu-item-has-children > a").on("click", function (e) {
+		$('.header-nav-mobile li[class*="menu-item-has-children"] > a').on("click", function (e) {
 			e.preventDefault();
 
 			const $link = $(this);
@@ -33,14 +30,14 @@ export const header = {
 			$link.toggleClass("dropdown-active");
 			$submenu.slideToggle();
 
-			// Ẩn các menu cùng cấp khác (chỉ trong cùng ul cha)
+			// Ẩn các menu cùng cấp khác (không đụng tới cấp con)
 			$link
-				.parent() // li
-				.siblings(".menu-item-has-children")
-				.find("> a.dropdown-active")
-				.removeClass("dropdown-active")
-				.next("ul")
-				.slideUp();
+				.parent() // li hiện tại
+				.siblings(".menu-item-has-children") // các li cùng cấp khác
+				.each(function () {
+					$(this).children("a").removeClass("dropdown-active"); // chỉ children trực tiếp
+					$(this).children("ul").slideUp(); // chỉ ẩn submenu trực tiếp
+				});
 		});
 	},
 	initVariable: function () {

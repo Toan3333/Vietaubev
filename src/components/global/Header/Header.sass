@@ -132,7 +132,7 @@
 	.header
 		@apply pt-0 fixed
 		.header-main-mobile
-			@apply h-[80px] pt-0
+			@apply h-[80px] flex-shrink-0 pt-0
 		.header-nav-mobile
 			position: absolute
 			transform: translateX(100%)
@@ -167,6 +167,19 @@
 					&[class*='current']
 						&>a
 							@apply text-Primary-Red border-b border-Primary-Red
+					&.menu-item-has-children
+						&>a
+							@apply relative flex items-center justify-between text-Primary-Red
+							&.dropdown-active
+								&::after
+									@apply rotate-180
+							&::after
+								content: '\f0d7'
+								@apply font-awesome font-black text-lg text-Primary-Red
+					ul.sub-menu
+						@apply bg-black/20 hidden
+						ul.sub-menu-children
+							@apply hidden
 @media (max-width: 1023.98px)
 	.header
 		.header-main-mobile
@@ -214,4 +227,4 @@
 								content: '\f0d7'
 								@apply font-awesome font-black text-lg text-Primary-Red
 					ul.sub-menu
-						@apply bg-black/20
+						@apply bg-black/20 hidden
